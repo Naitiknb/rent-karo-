@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+  <title>main page</title>
+</head>
+<body>
+
+
+
+<section id="header">
+<a href="#"><i class="fa-solid fa-browser"></i></a>
+
+ <!-- navbar  -->
+<div class="navbar" >
+<ul>
+<li><a class="active"    href="#">Home <i class="fa-solid fa-house-user"></i></a></li>
+<li><a class="active" href="#about">About  <i class="fa-solid fa-address-card"></i></a></li> 
+<li><a class="active"href="#about">Contact <i class="fa-solid fa-phone"></i></a>
+<li><a class="active" href="#" id="cart-link">Cart <i class="fa-solid fa-cart-shopping"></i></a></li>
+
+<div id="CartBox">
+  <div id="cartNotification"></div>
+  <ul id="cartList">
+    <!-- existing cart items -->
+  </ul>
+</div>
+
+
+  <div class="box" id="cart-box">
+    <h1>Shopping Cart</h1>
+  
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Name</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="amt" colspan="2">Total:</td>
+          <td id="total">0.00$</td>
+        </tr>
+      </tbody>
+    </table>
+  
+  
+   <a href="address page.html"><button class="paymentbutton">Continue to Payment</button></a>
+  </div>
+
+
+
+ <!-- serach  -->
+
+    <div class="container">
+      
+        <input type="text" name="search" placeholder="search..." class="input" />
+  
+        <a href="#" class="btn">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+</section>
+
+
+
+
+
+  <!-- slideshow  -->
+
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="img/Screenshot 2023-04-10 175211.png" alt="Image 1">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/Screenshot 2023-04-10 195824.png" alt="Image 2">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="img/Screenshot 2023-04-10 222615.png" alt="Image 3">
+    </div>
+  </div>
+
+
+ <!-- feature  -->
+<div id="feature" class="section-p1">
+  <div class="fe-box">
+    <img src="./img/f1.png" alt="" style="width:100%">
+    <h6>Free Shipping</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="./img/f2.png" alt="" style="width:100%">
+    <h6>Online</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="./img/f3.png" alt="" style="width:100%">
+    <h6>Save Money</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="./img/f4.png" alt="" style="width:100%">
+    <h6>Happy sell</h6>
+  </div>
+  
+  <div class="fe-box">
+    <img src="./img/f6.png" alt="" style="width:100%">
+    <h6>24/7 support</h6>
+  </div>
+</div>
+
+
+<!-- dashborad  -->
+
+    <div class="playstation">
+      <h5>Playstation</h5>
+    </div>
+ <!-- card 1 -->
+
+ <div class="card">
+  <img src="img/ps 5.png" alt="" style="width:66%">
+  <h1>Playstation 5</h1>
+  <p class="price">10$/day</p>
+  <p><span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span></p>
+  <p><button onclick="addToCart('ps 5.png', 'Playstation 5',10)">Add to Cart</button></p>
+  <p><button>Rent Now</button></p>
+</div>
+
+<!-- card 2 -->
+
+  <div class="card2">
+    <img src="img/PlayStation-PNG-Image-PNG.png" alt="" style="width:66%">
+    <h1>Playstation 4</h1>
+    <p class="price">10$/day</p>
+    <p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span></p>
+      <p><button onclick="addToCart('PlayStation-PNG-Image-PNG.png','Playstation 4',10)">Add to Cart</button></p>
+    <p><button>Rent Now</button></p>
+  </div> 
+
+
+
+
+ <!-- 2nd dashborad  --> 
+
+  <div class="Stationery">
+    <h6>Stationery</h6>
+  </div>
+
+   <!-- card 3  -->
+  <div class="card3">
+    <img src="img/Bicycle-PNG-Clipart.png" alt="" style="width:66%">
+    <h1>bicycle</h1>
+    <p class="price">4$/day</p>
+    <p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span></p>
+      <p><button onclick="addToCart('Bicycle-PNG-Clipart.png','bicycle',4)">Add to Cart</button></p>
+    <p><button>Rent Now</button></p>
+  </div>
+
+<!-- card 4  -->
+
+  <div class="card4">
+    <img src="img/Bicycle-PNG-Transparent-Image.png" alt="" style="width:66%"  >
+    <h1> Hero cycle</h1>
+    <p class="price">2$/day</p>
+    <p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span></p>
+      <p><button onclick="addToCart('Bicycle-PNG-Transparent-Image.png','bicycle',4)">Add to Cart</button></p>
+    <p><button>Rent Now</button></p>
+  </div>
+
+
+  <div class="card5">
+    <img src="img/Bicycle-Transparent-PNG.png" alt="" style="width:66%">
+    <h1>bicycle</h1>
+    <p class="price">4$/day</p>
+    <p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span></p>
+      <p><button onclick="addToCart('Bicycle-Transparent-PNG.png','bicycle',4)">Add to Cart</button></p>
+    <p><button>Rent Now</button></p>
+  </div>
+
+
+  <div class="camera">
+    <h6>Cameras</h6>
+  </div>
+
+  <!-- card6  -->
+
+
+  <div class="card6">
+    <img src="img/Digital-SLR-Camera-PNG-Photos.png" alt="" style="width:66%">
+    <h1>Camera</h1>
+    <p class="price">4$/day</p>
+    <p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span></p>
+      <p><button alert="item added to cart" onclick="addToCart('Digital-SLR-Camera-PNG-Photos.png','bicycle',4)">Add to Cart</button></p>
+    <p><button>Rent Now</button></p>
+  </div>
+
+
+<div class="card7">
+  <img src="img/DSLR-Camera-PNG-Image.png" alt="" style="width:64%">
+  <h1>DSLR camera</h1>
+  <p class="price">4$/day</p>
+  <p><span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span></p>
+    <p><button onclick="addToCart('DSLR-Camera-PNG-Image.png','bicycle',4)">Add to Cart</button></p>
+  <p><button>Rent Now</button></p>
+</div>
+
+
+
+  <div class="speaker">
+    <h6>Speakers</h6>
+  </div>
+
+
+  <div class="card8">
+    <img src="img/Audio-Speakers-Amplifier-PNG-Photos - Copy.png" alt="" style="width:64%">
+    <h1>loud speaker</h1>
+    <p class="price">4$/day</p>
+    <p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span></p>
+      <p><button onclick="addToCart('Audio-Speakers-Amplifier-PNG-Photos - Copy.png','bicycle',4)">Add to Cart</button></p>
+    <p><button>Rent Now</button></p>
+  </div>
+
+  <div class="card9">
+    <img src="img/Audio-Speakers-Amplifier-Transparent-PNG.png" alt="" style="width:64%">
+    <h1>speaker</h1>
+    <p class="price">4$/day</p>
+    <p><span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span></p>
+      <p><button onclick="addToCart('Audio-Speakers-Amplifier-Transparent-PNG.png','bicycle',4)">Add to Cart</button></p>
+    <p><button>Rent Now</button></p>
+  </div>
+
+
+  <div class="about-section" id="about">
+    <h2>About RentKaro</h2>
+    <p>RentKaro is a leading online platform that allows you to rent anything you want, from electronics to appliances, furniture, and more. Our mission is to make renting easy, affordable, and convenient for everyone.</p>
+    <h2>Why Choose RentKaro?</h2>
+    <ul>
+      <li>Fast Delivery: We offer fast and reliable delivery to ensure you get your rented item when you need it.</li>
+      <li>Huge Selection: With a wide range of products to choose from, you can find exactly what you need to make your life easier.</li>
+      <li>Flexible Rental Periods: Rent for as long as you need, whether it's a day, a week, or a month.</li>
+      <li>Easy Returns: Returning your rented item is easy and hassle-free.</li>
+    </ul>
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need help with your rental, please feel free to contact us:</p>
+    <div class="icon">
+      <a href="https://www.instagram.com/rentkaro/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/rentkaro"><i class="fa-brands fa-facebook"></i></a>
+      <a href="tel:8329067414"><i class="fa-solid fa-phone"></i></a>
+    </div>
+  </div>
+
+<script src="cart.js"></script>
+</body>
+</html>  
+

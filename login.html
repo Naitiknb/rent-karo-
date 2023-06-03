@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="login.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="login.js"></script>
+</head>
+<body>
+  <form id="loginForm" method="POST" action="/login">
+
+        <img class="man" src="img/man 2.png">
+        <h1 class="h1">Welcome to Rent-Karo</h1>
+        <label class="user">Username</label>
+        <input class="username" type="text" name="username">
+
+        <label class="pass">Password</label>
+        <input class="password" type="password" name="password">
+
+        <a href="main.html"><label class="forget">Forgot password?</label></a>
+        <button type="submit" class="login"><b>LOGIN</b> <i class="fa-solid fa-right-to-bracket"></i></button>
+
+        <a href="signup.html" class="ac">
+          <b>CREATE AN ACCOUNT</b>  <i class="fa-solid fa-user-plus"></i>
+        </a>
+        
+       
+        <button class="sign"><b>SIGN UP WITH GOOGLE</b> <i class="fa-brands fa-google"></i></button>
+        <div class="box"></div>
+        <img class="bulb" src="img/bulb.png">
+        <img class="rectangle" src="img/Rectangle.png">
+    </form>
+</body>
+</html>

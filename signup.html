@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+    <h1>CREATE YOUR ACCOUNT</h1>
+    <form action="/signup" method="POST" id="signupForm">
+        <img class="man" src="img/man 2.png">
+        <label class="user">Username</label>
+        <input class="username" type="text" name="username" required>
+
+        <label class="pass">Password</label>
+        <input class="password" type="password" name="password" required>
+
+        <label class="cpass">Confirm password</label>
+        <input class="cpassword" type="password" name="cpassword" required>
+
+        <label class="email">Email</label>
+        <input class="email1" type="email" name="email" required>
+
+        <a href="login.html">
+            <button class="sign">SIGN IN   <i class="fa-solid fa-user-plus"></i></button>
+        </a>
+
+        <div class="box"></div>
+
+        <img class="pic1" src="img/Girl and boy sitting with laptop.png">
+        <div class="message" style="display: none;">Please enter all the required details.</div>
+    </form>
+
+    <script>
+        var form = document.querySelector("#signupForm");
+        var message = document.querySelector(".message");
+
+        form.addEventListener("submit", function(event) {
+            var username = document.querySelector(".username");
+            var password = document.querySelector(".password");
+            var confirmPassword = document.querySelector(".cpassword");
+            var email = document.querySelector(".email1");
+
+            if (!username.value || !password.value || !confirmPassword.value || !email.value) {
+                event.preventDefault(); // Prevent form submission
+                message.style.display = "block";
+            } else if (password.value !== confirmPassword.value) {
+                event.preventDefault(); // Prevent form submission
+                alert("Passwords do not match. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

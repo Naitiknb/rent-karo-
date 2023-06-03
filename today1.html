@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+  background: #6C95FF;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    
+    .left-side {
+      color: black;
+      padding: 114px;
+      margin-top: -82px;
+    }
+    
+    .right-side {
+      background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: -27px;
+    border-radius: 30px;
+      
+    }
+    
+    .item {
+      margin-bottom: 10px;
+    }
+    
+    .card-details input {
+    width: 83%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    color:  white;
+    border: none;
+    background-color: #6C95FF;
+    }
+    
+    .terms {
+      margin-top: 20px;
+    }
+    
+    .pay-now-button {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    
+    .accepted-cards {
+      margin-top: 20px;
+    }
+    
+    .icon-container {
+      font-size: 39px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+
+    
+    
+    .icon-container i {
+      margin-right: 132px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-side">
+      <h2>Order No: 12345</h2>
+      <div class="item">
+        <span>Item 1</span>
+        <span>$9.99</span>
+      </div>
+      <div class="item">
+        <span>Item 2</span>
+        <span>$14.99</span>
+      </div>
+      <div class="item">
+        <span>Item 3</span>
+        <span>$19.99</span>
+      </div>
+      <div class="item">
+        <span>Item 4</span>
+        <span>$24.99</span>
+      </div>
+      <hr> <!-- Horizontal line -->
+      <div class="subtotal">
+        <span>Subtotal:</span>
+        <span>$69.96</span>
+      </div>
+    </div>
+    <div class="right-side">
+      <h2>Card Details</h2>
+      <div class="accepted-cards">
+        <label for="fname">Accepted Cards</label>
+        <div class="icon-container">
+          <i class="fab fa-cc-visa" style="color: navy;"></i>
+          <i class="fab fa-cc-amex" style="color: blue;"></i>
+          <i class="fab fa-cc-mastercard" style="color: red;"></i>
+          <i class="fab fa-cc-discover" style="color: orange;"></i>
+        </div>
+      </div>
+      <div class="card-details">
+        <input type="text" placeholder="Cardholder Name">
+        <input type="text" placeholder="Card Number">
+        <input type="text" placeholder="Expiry Date">
+        <input type="text" placeholder="CVV Number">
+      </div>
+      <div class="terms">
+        <input type="checkbox" id="termsCheckbox">
+        <label for="termsCheckbox">I accept all terms and conditions</label>
+      </div>
+      <div style="margin-top: 20px;">
+        <button class="pay-now-button">Pay Now</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
