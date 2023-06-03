@@ -1,2 +1,2 @@
 # rent-karo-
-rent karo
+rent k
