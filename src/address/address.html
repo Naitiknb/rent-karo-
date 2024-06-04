@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address/delivery</title>
+    <link rel="stylesheet" href="../../main.css"/>
+<link href="./address.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-light">
+
+
+
+
+<!-- nav -->
+<nav class="navbar">
+    <div class="container ">
+      <img src="../../img/logo.png" alt="logo" id="navbar-toggler">
+      <div class="navbar-menu">
+        <a href="../../main.html"><label style="color: #6C95FF;">Home</label></a>
+        <label>Products</label>
+      <a href="../about/about.html" style="color: black;"> <label>Contact</label> </a> 
+      </div>
+  
+  
+  
+  
+  
+      <!-- The Modal -->
+      <div class="">
+        <label id="myBtn" style="cursor: pointer;">Select Your location </label> <i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>
+      </div>
+      
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h3 id="selecLocation" class="text-center" style="color: #6C95FF;">Select Your location</h3>
+          <span class="close">&times;</span>
+          <div class="mb-2" style="position: relative;">
+            <i id="loc-search" class="bi bi-search mx-2"></i>
+            <input type="search" id="searchInput" name="search" class="form-control text-center" style="margin-top: -3px;" placeholder="Search for a city...">
+          </div>
+      
+          <div class="locations" id="locationsList">
+            <label onclick="updateLocation('Mumbai')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Mumbai</label>
+            <label onclick="updateLocation('Bangalore')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Bangalore</label>
+            <label onclick="updateLocation('Ahemdabad')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Ahemdabad</label>
+            <label onclick="updateLocation('Chennai')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Chennai</label>
+            <label onclick="updateLocation('Kochi')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Kochi</label>
+            <label onclick="updateLocation('Pune')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Pune</label>
+            <label onclick="updateLocation('Delhi')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Delhi</label>
+            <label onclick="updateLocation('Amritsar')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Amritsar</label>
+            <label onclick="updateLocation('Kolkata')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Kolkata</label>
+            <label onclick="updateLocation('Patna')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Patna</label>
+            <label onclick="updateLocation('Lucknow')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Lucknow</label>
+            <label onclick="updateLocation('Varanasi')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Varanasi</label>
+          </div>
+        </div>
+      </div>
+  
+      <div class="navbar-search">
+        <input type="search" name="search" placeholder="Search Anything" class="form-control">
+        <a href="../login/login.html"><label id="user"><i class="fa-solid fa-users mx-5"></i></label></a>
+      </div>
+     
+    
+      <!-- <div class="">
+        <a href="../cart/cart.html"> <label class="mx-2" style="color: #6C95FF;"><i class="fa-solid fa-cart-shopping"></i></label></a>
+        <div class="cart text-center" style="color: white; position: relative;  background-color: #6C95FF; border-radius: 20px; width: 40px; font-size: 10px;">
+         <div id="cart_amount">0</div>
+      </div> -->
+  
+    
+  
+  
+      </div>
+  
+  
+      
+      <div class="navbar-toggler" style="border: none;" id="navbar-toggle-button">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+      <div class="navbar-mobile-menu" id="navbar-mobile-menu">
+       <a href="../../main.html"> <label style="color: #6C95FF;">Home</label></a>
+        <label>products</label>
+        <a href="../address/address.html" style="color: black;"><label>Contact</label></a>
+  
+  
+  
+      
+   
+        <input type="search" name="search" placeholder="Search Anything" class="form-control">
+  
+        <label id="user"><i class="fa-solid fa-users"></i></label>
+  
+  
+    
+      </div>
+    </div>
+  </nav>
+  <!-- nav -->
+
+
+
+
+
+    <div class="container full-height">
+        <div class="row full-height">
+            <div class="col-md-6 my-5">
+               
+
+                <div class="container add-box rounded h-auto" style="background-color: white; margin-top: 100px;">
+                    <h5 class="" style="background-color: white; font-size: 15px;">Do you already have an account? <a href="../../login.html">Login in</a></h5>
+
+                    <div class="section-title">
+                        <h5>Address</h5>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label>Email Address</label>
+                        <input id="add-inputs" type="text" placeholder="nb6@gmail.com" class="form-control my-2">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>First Name</label>
+                            <input id="add-inputs" type="text" placeholder="First Name" class="form-control my-2">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Last Name</label>
+                            <input id="add-inputs" type="text" placeholder="Last Name" class="form-control my-2">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label>Street Address</label>
+                        <input id="add-inputs" type="text" placeholder="Airport Road" class="form-control my-2">
+                    </div>
+
+                    <div class="col-md-12">
+                        <label>Country</label>
+                        <input id="add-inputs" type="text" placeholder="India" class="form-control my-2">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Post Code</label>
+                            <input id="add-inputs" type="text" placeholder="40---" class="form-control my-2">
+                        </div>
+                        <div class="col-md-6">
+                            <label>Phone</label>
+                            <input id="add-inputs" type="text" placeholder="+91 -----" class="form-control my-2">
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <input type="radio" name="details" class="my-2 mx-2" checked>
+                        <label>Save My details for Future Purpose</label>
+                    </div>
+                    <div class="">
+                        <input type="radio" name="details" class="my-2 mx-2">
+                        <label>Subscribe for exclusive offers and coupons</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 my-5">
+                <div class="container rounded h-auto card-container" style="margin-top: 100px;">
+                    <div class="shipping-details-title">
+                        <h5>Shipping-Details</h5>
+                    </div>
+
+                    <div class="card my-5">
+                        <div class="card-body d-flex justify-content-between">
+                            <div class="d-flex radio-container">
+                                <input type="radio" name="shipping" class="mx-3">
+                                <h5 class="radio-label">Free</h5>
+                            </div>
+                            <div class="shipping-details">
+                                <h5>DHL</h5>
+                                <p>3-4 Business days</p>
+                            </div>
+                            <div class="">
+                                <img src="../../img/dhl-express.svg" class="img-fluid" style="height: 50px; width: 50px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card my-5">
+                        <div class="card-body d-flex justify-content-between">
+                            <div class="d-flex radio-container">
+                                <input type="radio" name="shipping" class="mx-3">
+                                <h5 class="radio-label">40 <i class="bi bi-currency-rupee"></i></h5>
+                            </div>
+                            <div class="shipping-details">
+                                <h5>DHL</h5>
+                                <p>Next Day</p>
+                            </div>
+                            <div class="">
+                                <img src="../../img/fedex-express-6.svg" class="img-fluid" style="height: 50px; width: 50px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card my-5">
+                        <div class="card-body d-flex justify-content-between">
+                            <div class="d-flex radio-container">
+                                <input type="radio" name="shipping" class="mx-3">
+                                <h5 class="radio-label">150 <i class="bi bi-currency-rupee"></i></h5>
+                            </div>
+                            <div class="shipping-details">
+                                <h5>DHL</h5>
+                                <p>On day</p>
+                            </div>
+                            <div class="">
+                                <img src="../../img/delhivery.svg" class="img-fluid" style="height: 50px; width: 50px;">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100" style="border-radius: 30px;">Contine to Payment</button>
+                </div>
+
+             
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+ <!-- footer -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>Mumbai, Maharashtra </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>+91 8329067414</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>naitikbohra6@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                            elit,Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Expert Team</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Latest News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  </footer>
+  
+  <!-- footer -->
+
+
+
+
+  
+ <!-- footer -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>Mumbai, Maharashtra </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>+91 8329067414</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>naitikbohra6@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="../../img/logo.png" class="img-fluid" alt="logo"></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                            elit,Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">services</a></li>
+                            <li><a href="#">portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Expert Team</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Latest News</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  </footer>
+  <script src="../../common.js"></script>
+  <!-- footer -->
+</body>
+</html>
+

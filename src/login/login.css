@@ -1,0 +1,37 @@
+
+body {
+    background-color: #6C95FF;
+    color: white;
+
+  }
+
+
+  .bulb {
+    margin-left: 90px;
+
+    height: 150px;
+  }
+
+  .man {
+    margin-top: 50px;
+  }
+
+  .sign,
+  .login {
+    background-color: #6C95FF;
+    border: 1px solid white;
+    color: white;
+  }
+
+
+  .sign,
+  .login:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: #6C95FF;
+  }
+
+
+  .forget:hover {
+    color: #6C95FF;
+  }

@@ -1,301 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome To Rent Karo</title>
+ 
+  <link rel="stylesheet" href="main.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
-
-  <title>main page</title>
 </head>
 <body>
 
-
-
-<section id="header">
-<a href="#"><i class="fa-solid fa-browser"></i></a>
-
- <!-- navbar  -->
-<div class="navbar" >
-<ul>
-<li><a class="active"    href="#">Home <i class="fa-solid fa-house-user"></i></a></li>
-<li><a class="active" href="#about">About  <i class="fa-solid fa-address-card"></i></a></li> 
-<li><a class="active"href="#about">Contact <i class="fa-solid fa-phone"></i></a>
-<li><a class="active" href="#" id="cart-link">Cart <i class="fa-solid fa-cart-shopping"></i></a></li>
-
-<div id="CartBox">
-  <div id="cartNotification"></div>
-  <ul id="cartList">
-    <!-- existing cart items -->
-  </ul>
-</div>
-
-
-  <div class="box" id="cart-box">
-    <h1>Shopping Cart</h1>
-  
-    <table id="cart-table">
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Name</th>
-          <th>Amount</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="amt" colspan="2">Total:</td>
-          <td id="total">0.00$</td>
-        </tr>
-      </tbody>
-    </table>
-  
-  
-   <a href="address page.html"><button class="paymentbutton">Continue to Payment</button></a>
-  </div>
+<!-- nav -->
+<nav class="navbar">
+  <div class="container ">
+    <img src="./img/logo.png" alt="logo" id="navbar-toggler">
+    <div class="navbar-menu">
+      <a href="./main.html"><label style="color: #6C95FF;">Home</label></a>
+      <label>Products</label>
+    <a href="./src/about/about.html" style="color: black;"> <label>Contact</label> </a> 
+    </div>
 
 
 
- <!-- serach  -->
 
-    <div class="container">
-      
-        <input type="text" name="search" placeholder="search..." class="input" />
-  
-        <a href="#" class="btn">
-          <i class="fas fa-search"></i>
-        </a>
+
+    <!-- The Modal -->
+    <div class="">
+      <label id="myBtn" style="cursor: pointer;">Select Your location </label> <i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>
+    </div>
+    
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h3 id="selecLocation" class="text-center" style="color: #6C95FF;">Select Your location</h3>
+        <span class="close">&times;</span>
+        <div class="mb-2" style="position: relative;">
+          <i id="loc-search" class="bi bi-search mx-2"></i>
+          <input type="search" id="searchInput" name="search" class="form-control text-center" style="margin-top: -3px;" placeholder="Search for a city...">
+        </div>
+    
+        <div class="locations" id="locationsList">
+          <label onclick="updateLocation('Mumbai')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Mumbai</label>
+          <label onclick="updateLocation('Bangalore')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Bangalore</label>
+          <label onclick="updateLocation('Ahemdabad')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Ahemdabad</label>
+          <label onclick="updateLocation('Chennai')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Chennai</label>
+          <label onclick="updateLocation('Kochi')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Kochi</label>
+          <label onclick="updateLocation('Pune')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Pune</label>
+          <label onclick="updateLocation('Delhi')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Delhi</label>
+          <label onclick="updateLocation('Amritsar')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Amritsar</label>
+          <label onclick="updateLocation('Kolkata')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Kolkata</label>
+          <label onclick="updateLocation('Patna')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Patna</label>
+          <label onclick="updateLocation('Lucknow')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Lucknow</label>
+          <label onclick="updateLocation('Varanasi')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Varanasi</label>
+        </div>
       </div>
-</section>
-
-
-
-
-
-  <!-- slideshow  -->
-
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="img/Screenshot 2023-04-10 175211.png" alt="Image 1">
     </div>
+
+    <div class="navbar-search">
+      <input type="search" name="search" placeholder="Search Anything" class="form-control">
+      <a href="./src/login/login.html"><label id="user"><i class="fa-solid fa-users mx-5"></i></label></a>
+    </div>
+   
+  
+    <div class="">
+      <a href="./src/cart/cart.html"> <label class="mx-2" style="color: #6C95FF;"><i class="fa-solid fa-cart-shopping"></i></label></a>
+      <div class="cart text-center" style="color: white; position: relative;  background-color: #6C95FF; border-radius: 20px; width: 40px; font-size: 10px;">
+       <div id="cart_amount">0</div>
+    </div>
+
+  
+
+
+    </div>
+
+
     
-    <div class="mySlides fade">
-      <img src="img/Screenshot 2023-04-10 195824.png" alt="Image 2">
-    </div>
+    <div class="navbar-toggler" style="border: none;" id="navbar-toggle-button">
+      <i class="fa-solid fa-bars"></i>
+  </div>
+    <div class="navbar-mobile-menu" id="navbar-mobile-menu">
+     <a href="./main.html"> <label style="color: #6C95FF;">Home</label></a>
+      <label>Products</label>
+      <a href="./src/about/about.html" style="color: black;"><label>Contact</label></a>
+
+
+
     
-    <div class="mySlides fade">
-      <img src="img/Screenshot 2023-04-10 222615.png" alt="Image 3">
+ 
+      <input type="search" name="search" placeholder="Search Anything" class="form-control">
+
+      <label id="user"><i class="fa-solid fa-users"></i></label>
+
+
+  
     </div>
   </div>
+</nav>
+<!-- nav -->
+
+<!-- slideshow -->
+
+<!-- slideshow 1 -->
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide my-5 container position-relative">
+  <!-- Carousel content -->
+  <div class="carousel-indicators" style="position: absolute; left: 800px;">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner rounded    ">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="./img/ps-5.png" class="d-block w-100" style="height:500px;" alt="...">
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4 d-flex flex-column justify-content-center align-items-start">
+          <h5 class="fw-bold d-md-block d-none ">Sony Playstation 5 With Dual Sense Controller</h5>
+          <h5 class="fw-bold d-md-none d-block mx-2 ">Sony Playstation 5 With Dual Sense Controller</h5>
+          <p class="d-md-block d-none">Rent will be charged per/day basis</p>
+          <p class="d-md-none d-block mx-2">Rent will be charged per/day basis</p>
+          <button class="btn btn-primary mt-2 w-50 d-md-block d-none">Rent Now @ 1000 <i class="bi bi-currency-rupee"></i>/day</button>
+          <button class="btn btn-primary mt-2 w-50 d-md-none d-block my-5 mx-3">Rent Now @ 1000 <i class="bi bi-currency-rupee"></i>/day</button>
+        </div>
+      </div>
+    </div>
+<!-- slideshow 1 -->
 
 
- <!-- feature  -->
-<div id="feature" class="section-p1">
-  <div class="fe-box">
-    <img src="./img/f1.png" alt="" style="width:100%">
-    <h6>Free Shipping</h6>
+
+<!-- slideshow 2 -->
+    <div class="carousel-item" data-bs-interval="2000">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="./img/controller.png" class="d-block w-100" style="height:500px;" alt="...">
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4 d-flex flex-column justify-content-center align-items-start">
+          <h5 class="fw-bold d-md-block d-none">Sony playstation 5 Dual Sense Controller</h5>
+          <h5 class="fw-bold d-md-none d-block mx-2">Sony playstation 5 Dual Sense Controller</h5>
+          <p class="d-md-block d-none">Rent Will be charged on per/Day basis</p>
+          <p class="d-md-none d-block mx-2">Rent Will be charged on per/Day basis</p>
+          <button class="btn btn-primary mt-2 w-50 d-md-block d-none">Rent Now @ 500  <i class="bi bi-currency-rupee"></i>/day</button>
+          <button class="btn btn-primary mt-2 w-50 d-md-none d-block my-5 mx-3">Rent Now @ 500  <i class="bi bi-currency-rupee"></i>/day</button>
+        </div>
+      </div>
+    </div>
+<!-- slideshow 2 -->
+
+
+<!-- slideshow 3 -->
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="./img/cycle-1.png" class="d-block w-100" style="height:500px;" alt="...">
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4 d-flex flex-column justify-content-center align-items-start">
+          <h5 class="fw-bold d-md-block d-none">Hero Bycycle With 7 Transmission Gear</h5>
+          <h5 class="fw-bold d-md-none d-block mx-2">Hero Bycycle With 7 Transmission Gear</h5>
+          <p class="d-md-block d-none">Rent will be Charged  Per/Hour Basis</p>
+          <p class="d-md-none d-block mx-2">Rent will be Charged  Per/Hour Basis</p>
+          <button class="btn btn-primary mt-2 w-50 d-md-block d-none">Rent Now @ 200 <i class="bi bi-currency-rupee"></i>/hr</button>
+          <button class="btn btn-primary mt-2 w-50 d-md-none d-block my-5 mx-3">Rent Now @ 200 <i class="bi bi-currency-rupee"></i>/hr</button>
+        </div>
+      </div>
+    </div>
+<!-- slideshow 3 -->
   </div>
-  
-  <div class="fe-box">
-    <img src="./img/f2.png" alt="" style="width:100%">
-    <h6>Online</h6>
+<!-- slideshow 4 -->
+
+  <div class="carousel-controls">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  
-  <div class="fe-box">
-    <img src="./img/f3.png" alt="" style="width:100%">
-    <h6>Save Money</h6>
+</div>
+<!-- slideshow -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- filter -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-12 rounded my-5" style="background-color: white;">
+      <h5 class="my-2 text-center fw-bold">Filter By Section</h5>
+   
+      <hr>
+      <div class="d-flex justify-content-between">
+        <label class="fw-bold h6">Filter by Category</label>
+        <i class="bi bi-chevron-compact-down h6"></i>
+      </div>
+      <div class="mb-2">
+        <i class="bi bi-search mx-2" style="position: absolute;"></i>
+        <input type="search" name="search" class="form-control text-center" style="height: 30px;" >
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="gamingConsole">
+        <label class="form-check-label" for="gamingConsole">Gaming Console</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="camera">
+        <label class="form-check-label" for="camera">Camera</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="bicycle">
+        <label class="form-check-label" for="bicycle">Bicycle</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="soundSystem">
+        <label class="form-check-label" for="soundSystem">Sound System and Woofers</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="electronicDevices">
+        <label class="form-check-label" for="electronicDevices">Electronic Devices</label>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between">
+        <label class="fw-bold h6">Filter by Company</label>
+        <i class="bi bi-chevron-compact-down h6"></i>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="sony">
+        <label class="form-check-label" for="sony">Sony</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="microsoft">
+        <label class="form-check-label" for="microsoft">Microsoft</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="hero">
+        <label class="form-check-label" for="hero">Hero</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="nikon">
+        <label class="form-check-label" for="nikon">Nikon</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="casio">
+        <label class="form-check-label" for="casio">Casio</label>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-around my-2">
+        <button class="btn btn-light border" style="width: 40%;">Reset</button>
+        <button class="btn btn-primary" style="width: 40%;">Apply</button>
+      </div>
+    </div>
+
+    <div class="col-md-9 col-12 my-5 d-flex flex-wrap" id="product-list">
+      
+</div>
   </div>
-  
-  <div class="fe-box">
-    <img src="./img/f4.png" alt="" style="width:100%">
-    <h6>Happy sell</h6>
-  </div>
-  
-  <div class="fe-box">
-    <img src="./img/f6.png" alt="" style="width:100%">
-    <h6>24/7 support</h6>
-  </div>
+
 </div>
 
 
-<!-- dashborad  -->
-
-    <div class="playstation">
-      <h5>Playstation</h5>
-    </div>
- <!-- card 1 -->
-
- <div class="card">
-  <img src="img/ps 5.png" alt="" style="width:66%">
-  <h1>Playstation 5</h1>
-  <p class="price">10$/day</p>
-  <p><span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span></p>
-  <p><button onclick="addToCart('ps 5.png', 'Playstation 5',10)">Add to Cart</button></p>
-  <p><button>Rent Now</button></p>
-</div>
-
-<!-- card 2 -->
-
-  <div class="card2">
-    <img src="img/PlayStation-PNG-Image-PNG.png" alt="" style="width:66%">
-    <h1>Playstation 4</h1>
-    <p class="price">10$/day</p>
-    <p><span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span></p>
-      <p><button onclick="addToCart('PlayStation-PNG-Image-PNG.png','Playstation 4',10)">Add to Cart</button></p>
-    <p><button>Rent Now</button></p>
-  </div> 
+<!-- footer -->
 
 
-
-
- <!-- 2nd dashborad  --> 
-
-  <div class="Stationery">
-    <h6>Stationery</h6>
+<footer class="footer-section">
+  <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="cta-text">
+                          <h4>Find us</h4>
+                          <span>Mumbai, Maharashtra </span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="fas fa-phone"></i>
+                      <div class="cta-text">
+                          <h4>Call us</h4>
+                          <span>+91 8329067414</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-md-4 mb-30">
+                  <div class="single-cta">
+                      <i class="far fa-envelope-open"></i>
+                      <div class="cta-text">
+                          <h4>Mail us</h4>
+                          <span>naitikbohra6@gmail.com</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+          <div class="row">
+              <div class="col-xl-4 col-lg-4 mb-50">
+                  <div class="footer-widget">
+                      <div class="footer-logo">
+                          <a href="index.html"><img src="./img/logo.png" class="img-fluid" alt="logo"></a>
+                      </div>
+                      <div class="footer-text">
+                          <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                          elit,Lorem ipsum dolor sit amet.</p>
+                      </div>
+                      <div class="footer-social-icon">
+                          <span>Follow us</span>
+                          <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                          <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                          <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Useful Links</h3>
+                      </div>
+                      <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">about</a></li>
+                          <li><a href="#">services</a></li>
+                          <li><a href="#">portfolio</a></li>
+                          <li><a href="#">Contact</a></li>
+                          <li><a href="#">About us</a></li>
+                          <li><a href="#">Our Services</a></li>
+                          <li><a href="#">Expert Team</a></li>
+                          <li><a href="#">Contact us</a></li>
+                          <li><a href="#">Latest News</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                  <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Subscribe</h3>
+                      </div>
+                      <div class="footer-text mb-25">
+                          <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                      </div>
+                      <div class="subscribe-form">
+                          <form action="#">
+                              <input type="text" placeholder="Email Address">
+                              <button><i class="fab fa-telegram-plane"></i></button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
 
-   <!-- card 3  -->
-  <div class="card3">
-    <img src="img/Bicycle-PNG-Clipart.png" alt="" style="width:66%">
-    <h1>bicycle</h1>
-    <p class="price">4$/day</p>
-    <p><span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span></p>
-      <p><button onclick="addToCart('Bicycle-PNG-Clipart.png','bicycle',4)">Add to Cart</button></p>
-    <p><button>Rent Now</button></p>
-  </div>
-
-<!-- card 4  -->
-
-  <div class="card4">
-    <img src="img/Bicycle-PNG-Transparent-Image.png" alt="" style="width:66%"  >
-    <h1> Hero cycle</h1>
-    <p class="price">2$/day</p>
-    <p><span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span></p>
-      <p><button onclick="addToCart('Bicycle-PNG-Transparent-Image.png','bicycle',4)">Add to Cart</button></p>
-    <p><button>Rent Now</button></p>
-  </div>
+</footer>
 
 
-  <div class="card5">
-    <img src="img/Bicycle-Transparent-PNG.png" alt="" style="width:66%">
-    <h1>bicycle</h1>
-    <p class="price">4$/day</p>
-    <p><span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span></p>
-      <p><button onclick="addToCart('Bicycle-Transparent-PNG.png','bicycle',4)">Add to Cart</button></p>
-    <p><button>Rent Now</button></p>
-  </div>
+<div class="products"></div>
 
+<!-- footer -->
 
-  <div class="camera">
-    <h6>Cameras</h6>
-  </div>
-
-  <!-- card6  -->
-
-
-  <div class="card6">
-    <img src="img/Digital-SLR-Camera-PNG-Photos.png" alt="" style="width:66%">
-    <h1>Camera</h1>
-    <p class="price">4$/day</p>
-    <p><span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span></p>
-      <p><button alert="item added to cart" onclick="addToCart('Digital-SLR-Camera-PNG-Photos.png','bicycle',4)">Add to Cart</button></p>
-    <p><button>Rent Now</button></p>
-  </div>
-
-
-<div class="card7">
-  <img src="img/DSLR-Camera-PNG-Image.png" alt="" style="width:64%">
-  <h1>DSLR camera</h1>
-  <p class="price">4$/day</p>
-  <p><span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star checked"></span>
-    <span class="fa fa-star"></span>
-    <span class="fa fa-star"></span></p>
-    <p><button onclick="addToCart('DSLR-Camera-PNG-Image.png','bicycle',4)">Add to Cart</button></p>
-  <p><button>Rent Now</button></p>
-</div>
-
-
-
-  <div class="speaker">
-    <h6>Speakers</h6>
-  </div>
-
-
-  <div class="card8">
-    <img src="img/Audio-Speakers-Amplifier-PNG-Photos - Copy.png" alt="" style="width:64%">
-    <h1>loud speaker</h1>
-    <p class="price">4$/day</p>
-    <p><span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span></p>
-      <p><button onclick="addToCart('Audio-Speakers-Amplifier-PNG-Photos - Copy.png','bicycle',4)">Add to Cart</button></p>
-    <p><button>Rent Now</button></p>
-  </div>
-
-  <div class="card9">
-    <img src="img/Audio-Speakers-Amplifier-Transparent-PNG.png" alt="" style="width:64%">
-    <h1>speaker</h1>
-    <p class="price">4$/day</p>
-    <p><span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star checked"></span>
-      <span class="fa fa-star"></span>
-      <span class="fa fa-star"></span></p>
-      <p><button onclick="addToCart('Audio-Speakers-Amplifier-Transparent-PNG.png','bicycle',4)">Add to Cart</button></p>
-    <p><button>Rent Now</button></p>
-  </div>
-
-
-  <div class="about-section" id="about">
-    <h2>About RentKaro</h2>
-    <p>RentKaro is a leading online platform that allows you to rent anything you want, from electronics to appliances, furniture, and more. Our mission is to make renting easy, affordable, and convenient for everyone.</p>
-    <h2>Why Choose RentKaro?</h2>
-    <ul>
-      <li>Fast Delivery: We offer fast and reliable delivery to ensure you get your rented item when you need it.</li>
-      <li>Huge Selection: With a wide range of products to choose from, you can find exactly what you need to make your life easier.</li>
-      <li>Flexible Rental Periods: Rent for as long as you need, whether it's a day, a week, or a month.</li>
-      <li>Easy Returns: Returning your rented item is easy and hassle-free.</li>
-    </ul>
-    <h2>Contact Us</h2>
-    <p>If you have any questions or need help with your rental, please feel free to contact us:</p>
-    <div class="icon">
-      <a href="https://www.instagram.com/rentkaro/"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.facebook.com/rentkaro"><i class="fa-brands fa-facebook"></i></a>
-      <a href="tel:8329067414"><i class="fa-solid fa-phone"></i></a>
-    </div>
-  </div>
-
-<script src="cart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="./data.js"></script>
+<script src="./main.js"></script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>  
-
+</html>

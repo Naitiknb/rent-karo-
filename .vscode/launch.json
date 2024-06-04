@@ -7,8 +7,8 @@
         {
             "type": "msedge",
             "request": "launch",
-            "name": "Open main.html",
-            "file": "e:\\projects\\rent karo\\main.html"
+            "name": "Open login.html",
+            "file": "e:\\projects\\rent karo\\login.html"
         }
     ]
 }

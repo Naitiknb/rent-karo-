@@ -1,0 +1,56 @@
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#add-inputs {
+    border-radius: 20px !important;
+}
+
+#add-box{
+    background-color: white !important;
+}
+
+
+
+.card-body .d-flex {
+    align-items: center;
+}
+.radio-container {
+    align-items: center;
+}
+.radio-label {
+    display: flex;
+    align-items: center;
+}
+.radio-label h5 {
+    margin: 0;
+}
+.shipping-details {
+    text-align: center;
+}
+.shipping-details-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card-container {
+    background-color: white;
+    padding: 20px;
+}
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.add-box {
+    padding: 20px;
+    margin-top: 20px;
+}
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
