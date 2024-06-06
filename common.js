@@ -9,7 +9,8 @@
         locationLabel.innerText = location; // Update the text
         modal.style.display = "none"; // Close the modal after selecting location
       }
-    
+
+  
       // JavaScript to handle modal display
       var modal = document.getElementById("myModal");
       var btn = document.getElementById("myBtn");
