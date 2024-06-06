@@ -11,7 +11,13 @@ const renderCart = () => {
     let totalPrice = 0;
 
     basket.forEach((product, index) => {
+        // Ensure product has a quantity property
+        if (!product.quantity) {
+            product.quantity = 1;
+        }
+
         totalPrice += product.productPrice;
+
         cartItems.innerHTML += `
             <div class="card my-5">
                 <div class="card-body row">
@@ -24,9 +30,9 @@ const renderCart = () => {
                         <label class="my-2">${product.productTitle}</label>
                         <br>
                         <select class="rounded my-2 w-auto h-25 text-center" onchange="updateQuantity(${index}, this.value)">
-                            <option value="1">Quantity-1</option>
-                            <option value="2">Quantity-2</option>
-                            <option value="3">Quantity-3</option>
+                            <option value="1" ${product.quantity == 1 ? 'selected' : ''}>Quantity-1</option>
+                            <option value="2" ${product.quantity == 2 ? 'selected' : ''}>Quantity-2</option>
+                            <option value="3" ${product.quantity == 3 ? 'selected' : ''}>Quantity-3</option>
                         </select>
                     </div>
                     <div class="col-12 col-sm-12 col-md-4 mt-2 text-md-end text-start">
@@ -51,8 +57,14 @@ const renderCart = () => {
 };
 
 const updateQuantity = (index, quantity) => {
-    basket[index].productPrice = (basket[index].productPrice / basket[index].quantity) * quantity;
-    basket[index].quantity = quantity;
+    let product = basket[index];
+    let pricePerUnit = product.productPrice / product.quantity;
+
+    // Update product's price and quantity
+    product.productPrice = pricePerUnit * parseInt(quantity);
+    product.quantity = parseInt(quantity);
+
+    // Update localStorage and re-render the cart
     localStorage.setItem('data', JSON.stringify(basket));
     renderCart();
 };
@@ -65,6 +77,13 @@ const removeFromCart = (index) => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Ensure all products in basket have quantity property
+    basket.forEach(product => {
+        if (!product.quantity) {
+            product.quantity = 1;
+        }
+    });
+
     renderCart();
     calculate();
 });
@@ -79,8 +98,6 @@ let calculate = () => {
 };
 
 calculate();
-
-
 
 // navbar
 

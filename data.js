@@ -11,6 +11,7 @@ const products = [
         title: 'Sony Playstation 5',
         description: 'Playstation 5 With Controller',
         price: 1000,
+        
         rating:5
       },
       {
