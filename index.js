@@ -8,16 +8,19 @@ function renderProducts(){
                     '<i class="bi bi-star gold-star"></i>'.repeat(5 - product.rating);
       const productCard = `
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 px-2">
-              <div class="card">
-                  <div class="card-body">
-                      <img id="product-image" src="${product.imgSrc}" class="img-fluid">
-                      <h4 id="product-title">${product.title}</h4>
+              <div class="card" >
+                  <div class="card-body ">
+                      <img id="product-image" src="${product.imgSrc}" class="img-fluid my-2">
+                    
+                      <h6 id="product-title">${product.title}</h6>
+                      
                       <p>${product.description}</p>
+                        <label> ${product.category}</Label>
                       <div class="d-flex">
                           <label id="product-price" class="my-2 fw-bold"> ${product.price} <i class="bi bi-currency-rupee"></i></label>
                       </div>
                       <div id="star" class="d-flex">${stars}</div>
-                      <button onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.imgSrc}')" class="container btn btn-primary my-2">
+                      <button onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.imgSrc}')" class="container btn-slideshow btn my-2">
                           Add to Cart <i class="bi bi-bag-plus"></i>
                       </button>
                   </div>

@@ -17,90 +17,108 @@
 
 
 <!-- nav -->
-<nav class="navbar">
-  <div class="container ">
-    <a href="../../index.html"><img src="../../img/logo.png" alt="logo" id="navbar-toggler"></a>
-    <div class="navbar-menu">
-      <a href="../../index.html"><label style="color: #6C95FF;">Home</label></a>
-      <label>Products</label>
-    <a href="./about.html" style="color: black;"> <label>Contact</label> </a> 
-    </div>
-
-
-
-
-
-    <!-- The Modal -->
-    <div class="">
-        <label id="myBtn" style="cursor: pointer;" class="">Select Your Region </label> <i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>
+<nav class="navbar" style="border-bottom:2px solid #1c110b; background-color: #fcf8ef; ">
+    <div class="container ">
+      <a href="../../index.html"><img src="../../img/logo-bg.png"  alt="logo" id="navbar-toggler"></a>
+  
+  
+  
+      <div class="navbar-menu">
+        <a href="../../index.html"><label style="color: #795037;">Home</label></a>
+        <label> Products</label>
+      <a href="./about.html"> <label>About us</label> </a> 
+      </div>
+  
+      <div class="navbar-search">
+        <input type="search" name="search" placeholder="Search" class="form-control" style="background-color: #795037; color: #fcf8ef;">
+        <i class="bi bi-search" style="color: #fcf8ef; position: relative; right: 30px;" ></i>
+      </div>
+  
+  
+  
+      <!-- The Modal -->
+      <div class="">
+        <label id="myBtn" style="cursor: pointer;" class="">Select Your Region </label> <i style="color: #795037;" class="bi bi-geo-alt-fill"></i>
       </div>
     
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <h3 id="selecLocation" class="text-center" style="color: #6C95FF;">Select Your location</h3>
-        <span class="close">&times;</span>
-        <div class="mb-2" style="position: relative;">
-          <i id="loc-search" class="bi bi-search mx-2"></i>
-          <input type="search" id="searchInput" name="search" class="form-control text-center" style="margin-top: -3px;" placeholder="Search for a city...">
-        </div>
-    
-        <div class="locations" id="locationsList">
-          <label onclick="updateLocation('Mumbai')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Mumbai</label>
-          <label onclick="updateLocation('Bangalore')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Bangalore</label>
-          <label onclick="updateLocation('Ahemdabad')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Ahemdabad</label>
-          <label onclick="updateLocation('Chennai')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Chennai</label>
-          <label onclick="updateLocation('Kochi')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Kochi</label>
-          <label onclick="updateLocation('Pune')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Pune</label>
-          <label onclick="updateLocation('Delhi')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Delhi</label>
-          <label onclick="updateLocation('Amritsar')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Amritsar</label>
-          <label onclick="updateLocation('Kolkata')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Kolkata</label>
-          <label onclick="updateLocation('Patna')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Patna</label>
-          <label onclick="updateLocation('Lucknow')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Lucknow</label>
-          <label onclick="updateLocation('Varanasi')"><i style="color: #6C95FF;" class="bi bi-geo-alt-fill"></i>Varanasi</label>
+  
+      
+      <div id="myModal" class="modal">
+        <div class="modal-content" >
+          <h3 id="selecLocation" class="text-center" style="color: #795037;">Select Your Region</h3>
+          <span class="close">&times;</span>
+          <div class="mb-2" style="position: relative;">
+            <i id="loc-search" class="bi bi-search mx-2"></i>
+            <input type="search" id="searchInput" name="search" class="form-control text-center w-100" style="margin-top: -3px;" placeholder="Search for a city...">
+          </div>
+      
+          <div class="locations" id="locationsList" style="color: #795037;">
+            <label onclick="updateLocation('Mumbai')"><i  class="bi bi-geo-alt-fill"></i>Mumbai</label>
+            <label onclick="updateLocation('Bangalore')"><i  class="bi bi-geo-alt-fill"></i>Bangalore</label>
+            <label onclick="updateLocation('Ahemdabad')"><i  class="bi bi-geo-alt-fill"></i>Ahemdabad</label>
+            <label onclick="updateLocation('Chennai')"><i  class="bi bi-geo-alt-fill"></i>Chennai</label>
+            <label onclick="updateLocation('Kochi')"><i  class="bi bi-geo-alt-fill"></i>Kochi</label>
+            <label onclick="updateLocation('Pune')"><i  class="bi bi-geo-alt-fill"></i>Pune</label>
+            <label onclick="updateLocation('Delhi')"><i  class="bi bi-geo-alt-fill"></i>Delhi</label>
+            <label onclick="updateLocation('Amritsar')"><i  class="bi bi-geo-alt-fill"></i>Amritsar</label>
+            <label onclick="updateLocation('Kolkata')"><i  class="bi bi-geo-alt-fill"></i>Kolkata</label>
+            <label onclick="updateLocation('Patna')"><i  class="bi bi-geo-alt-fill"></i>Patna</label>
+            <label onclick="updateLocation('Lucknow')"><i  class="bi bi-geo-alt-fill"></i>Lucknow</label>
+            <label onclick="updateLocation('Varanasi')"><i  class="bi bi-geo-alt-fill"></i>Varanasi</label>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="navbar-search">
-      <input type="search" name="search" placeholder="Search Anything" class="form-control">
-      <a href="../login/login.html"><label id="user"><i class="fa-solid fa-users mx-5"></i></label></a>
-    </div>
+  
+    
+  
+   
+     
+    
+      <!-- <div class="">
+        <a href="./src/cart/cart.html"> <label class="mx-2" style="color: #795037"><i class="fa-solid fa-cart-shopping"></i></label></a>
+        <div class="cart text-center" style="color: white; position: relative;  background-color: #795037; border-radius: 20px; width: 40px; font-size: 10px;">
+         <div id="cart_amount">0</div>
+      </div>
+      
+      </div> -->
+  
+  
+  
    
   
-    <!-- <div class="">
-      <a href="../cart/cart.html"> <label class="mx-2" style="color: #6C95FF;"><i class="fa-solid fa-cart-shopping"></i></label></a>
-      <div class="cart text-center" style="color: white; position: relative;  background-color: #6C95FF; border-radius: 20px; width: 40px; font-size: 10px;">
-       <div id="cart_amount">0</div>
-    </div>
-    </div> -->
-
-
-    
-    <div class="navbar-toggler" style="border: none;" id="navbar-toggle-button">
-      <i class="fa-solid fa-bars"></i>
-  </div>
-    <div class="navbar-mobile-menu" id="navbar-mobile-menu">
-     <a href="../../index.html"> <label style="color: #6C95FF;">Home</label></a>
-      <label>Products</label>
-      <a href="./about.html" style="color: black;"><label>Contact</label></a>
-
-
-
-    
- 
-      <input type="search" name="search" placeholder="Search Anything" class="form-control">
-
-      <label id="user"><i class="fa-solid fa-users"></i></label>
-
-
   
+      
+      <div class="d-md-block d-none">
+        
+      <a href="./src/login/login.html"><label id="user"><i class="fa-solid fa-users mx-5"></i></label></a></div>
+  
+      
+      <div class="navbar-toggler" style="border: none;" id="navbar-toggle-button">
+        <i class="fa-solid fa-bars"></i>
     </div>
-  </div>
-</nav>
-<!-- nav -->
+      <div class="navbar-mobile-menu" id="navbar-mobile-menu">
+       <a href="../../index.html"> <label style="color: #795037;">Home</label></a>
+        <label>Products</label>
+        <a href="./about.html" style="color: black;"><label>About us</label></a>
+  
+  
+  
+      
+   
+        <input type="search" name="search" placeholder="Search Anything" class="form-control">
+        <i class="bi bi-search" style="color: #795037; position: relative; left: 320px; bottom: 40px;" ></i>
+  
+        <label id="user"><i class="fa-solid fa-users"></i></label>
+  
+  
+    
+      </div>
+    </div>
+  </nav>
+  <!-- nav -->
 
 
-    <div class="container">
+    <div class="container" style="color: #795037; background-color: #fcf8ef;">
         <div class="row">
             <div class="col-md-6">
                 <p class="my-4 fw-bold" style="font-size: 90px;">Let's get Intouch</p>
@@ -118,35 +136,35 @@
 
 <div class="col-md-2"></div>
 
-            <div class="col-md-4" style="margin-top: 100px;">
+            <div class="col-md-4 my-5" >
 
-<label class="w-75">Great! we're exciited to hear from you and let's start something special together call us for any inquery.</label>
+<!-- <label class="w-75">Great! we're exciited to hear from you and let's start something special together call us for any inquery.</label> -->
 
-<div class=" container border my-5">
-<h3 class="my-3">Contact</h3>
-<div class="my-4">
-<input type="text" placeholder="Name" title="name" id="input">
-
-
-    <input type="text" placeholder="Email" title="email" id="input">
+<div class="container ">
+    <div class="contact-form-container">
+        <h3>Contact Us</h3>
+        <form>
+            <div class="form-group mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name" title="name" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email" title="email" required>
+            </div>
+            <div class="form-group mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Your Phone Number" title="phone" required>
+            </div>
+            <div class="form-group mb-4">
+                <label for="message" class="form-label">Tell us about what you are interested in</label>
+                <textarea class="form-control" id="message" placeholder="Tell us about what you are interested in" rows="4" title="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-slideshow w-100">Send to us</button>
+        </form>
+    </div>
 </div>
 
-<div class="my-4">
-    <input type="text" placeholder="Phone" title="email" id="input">
-
-
-    
-    <input type="text" placeholder="Subject" title="email" id="input">
-</div>
-    
-    <input type="text" placeholder="Tell us about you are intrested in ?" title="email" id="textarea"></input>
-
-
-    <button  class="button my-4">
-        Send to us  
-    </button>
-
-        </div>
     </div>
     </div>
 
@@ -158,8 +176,10 @@
 
     
 
- <!-- footer -->
-<footer class="footer-section">
+<!-- footer -->
+
+
+<footer class="footer-section" >
     <div class="container">
         <div class="footer-cta pt-5 pb-5">
             <div class="row">
@@ -197,18 +217,18 @@
                 <div class="col-xl-4 col-lg-4 mb-50">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a href="index.html"><img src="../../img/logo.png" class="img-fluid" alt="logo"></a>
+                            <a href="index.html"><img src="../../img/logo-bg.png" class="img-fluid" alt="logo"></a>
                         </div>
                         <div class="footer-text">
                             <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
                             elit,Lorem ipsum dolor sit amet.</p>
                         </div>
-                        <div class="footer-social-icon">
+                        <!-- <div class="footer-social-icon">
                             <span>Follow us</span>
                             <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
                             <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
                             <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
@@ -251,6 +271,9 @@
     </div>
   
   </footer>
+  
+  
+  <div class="products"></div>
   
   <!-- footer -->
 

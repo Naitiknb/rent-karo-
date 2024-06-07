@@ -228,3 +228,10 @@ top:10px;
 #loc-icon {
   margin-right: 20px;
 }
+
+
+
+#name,#email,#phone{
+  background-color: #795037 !important;
+}
+

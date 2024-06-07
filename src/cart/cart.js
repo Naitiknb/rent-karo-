@@ -24,8 +24,8 @@ const renderCart = () => {
                     <div class="col-12 col-sm-4 col-md-3">
                         <a><img src="${product.productImgSrc}" alt="cart" class="img-fluid my-1" onerror="this.onerror=null;this.src='../../img/default.png';"></a>
                     </div>
-                    <div class="col-12 col-sm-8 col-md-5">
-                        <label class="my-3">Name</label>
+                    <div class="col-12 col-sm-8 col-md-5 text-center">
+                        <label class="">Name</label>
                         <br>
                         <label class="my-2">${product.productTitle}</label>
                         <br>
@@ -35,11 +35,11 @@ const renderCart = () => {
                             <option value="3" ${product.quantity == 3 ? 'selected' : ''}>Quantity-3</option>
                         </select>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-4 mt-2 text-md-end text-start">
-                        <label class="close mb-5" onclick="removeFromCart(${index})">&times;</label>
-                        <label class="mt-5 d-block">Price</label>
+                    <div class="col-12 col-sm-12 col-md-4   text-center">
+                        <label class="close mb-1" onclick="removeFromCart(${index})">&times;</label>
+                        <label class="d-block">Price</label>
                         <br>
-                        <label class="mt-4">${product.productPrice} <i class="bi bi-currency-rupee"></i></label>
+                        <label class="">${product.productPrice} <i class="bi bi-currency-rupee"></i></label>
                     </div>
                 </div>
             </div>
