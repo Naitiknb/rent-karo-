@@ -2,6 +2,9 @@ const products = [
   {
     id: 1,
     imgSrc: '../../img/ps-5.png',
+    imgss_1:'../../img/ps-5.png',
+    imgss_2:'../../img/ps5-s2.png',
+    imgss_3:'../../img/ps5-s3.png',
     title: 'Sony Playstation 5',
     description: 'Playstation 5 With Controller',
     price: 1000,
@@ -22,7 +25,7 @@ const products = [
   {
     id: 3,
     imgSrc: '../../img/camera-1.png',
-    title: 'Canon 1200D camera',
+    title: 'Canon 1200D',
     description: 'Camera with one lens and battery',
     price: 1000,
     rating: 5,
@@ -32,7 +35,7 @@ const products = [
   {
     id: 4,
     imgSrc: '../../img/camera-2.png',
-    title: 'Nikon D5600 camera',
+    title: 'Nikon D5600 ',
     description: 'Camera with one lens and battery',
     price: 1000,
     rating: 4,
@@ -72,7 +75,8 @@ const products = [
   {
     id: 8,
     imgSrc: '../../img/speaker-1.png',
-    title: 'Sony speakers',
+
+    title: 'Sony 97898',
     description: 'Speaker with equipments',
     price: 1000,
     rating: 3,

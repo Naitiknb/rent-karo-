@@ -1,7 +1,9 @@
 body {
-  background-color: #fcf8ef!important;
+  background-color: white!important;
   margin: 0;
-  font-family: Arial, sans-serif
+  font-family: "Zen Dots", sans-serif !important;
+    font-weight: 300;
+    font-style: normal;
 }
 
 
@@ -10,7 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background-color: white;
   padding: 10px 20px;
   position: relative
 }
@@ -33,7 +35,7 @@ body {
 
 .navbar-menu label:hover {
   margin: 0 10px;
-  color: #795037;
+  color: #363f46;
   cursor: pointer
 }
 
@@ -47,7 +49,7 @@ body {
 }
 
 .form-control::placeholder{
-  color: #fcf8ef!important;
+  color: #363f46!important;
 }
 
 .form-control {
@@ -82,7 +84,7 @@ body {
 @media (max-width:768px) {
   .navbar-menu label:hover {
       margin: 0 10px;
-      color: #795037;
+      color: #363f46;
       cursor: pointer
   }
   .navbar-menu,
@@ -107,7 +109,7 @@ body {
 }
 
 #user {
-  color: #795037
+  color: #363f46
 }
 
 .icon-control {
@@ -117,7 +119,7 @@ body {
 }
 
 .btn-light {
-  background-color: #fff;
+  background-color: white;
   border-color: #e4e4e4
 }
 
@@ -132,7 +134,7 @@ ul {
 }
 
 .footer-section {
-  background-color: #fcf8ef;
+  background-color: white;
   position: relative
 }
 
@@ -141,7 +143,7 @@ ul {
 }
 
 .single-cta i {
-  color: #795037;
+  color: #363f46;
   font-size: 30px;
   float: left;
   margin-top: 25px
@@ -153,7 +155,7 @@ ul {
 }
 
 .cta-text h4 {
-  color: #795037;
+  color: #363f46;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 2px
@@ -185,7 +187,7 @@ ul {
 }
 
 .footer-social-icon span {
-  color: #795037;
+  color: #363f46;
   display: block;
   font-size: 20px;
   font-weight: 700;
@@ -194,7 +196,7 @@ ul {
 }
 
 .footer-social-icon a {
-  color: #795037;
+  color: #363f46;
   font-size: 16px;
   margin-right: 15px
 }
@@ -220,7 +222,7 @@ ul {
 }
 
 .footer-widget-heading h3 {
-  color: #795037;
+  color: #363f46;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 40px;
@@ -234,7 +236,7 @@ ul {
   bottom: -15px;
   height: 2px;
   width: 50px;
-  background: #795037
+  background: #363f46
 }
 
 .footer-widget ul li {
@@ -245,7 +247,7 @@ ul {
 }
 
 .footer-widget ul li a:hover {
-  color: #55acee
+  color: #a3c9bc
 }
 
 .footer-widget ul li a {
@@ -261,15 +263,15 @@ ul {
 .subscribe-form input {
   width: 100%;
   padding: 14px 28px;
-  background: #fff;
-  border: 1px solid #795037;
+  background: white;
+  border: 1px solid #363f46;
   color: #fff
 }
 
 .subscribe-form button {
   position: absolute;
   right: 0;
-  background: #795037;
+  background: #363f46;
   padding: 14px 20px;
   border: 1px solid #fff;
   top: 0
@@ -317,28 +319,45 @@ ul {
 
 }
 
-.card-body{
+.pagination{
+  text-decoration: none;
+}
+
+#page{
+  margin: 5px;
+  background-color: #363f46;
+  width: auto;
+  border-radius: 20px;
+  width: 25px;
+  text-align: center;
+  color: white;
+}
+
+.card-body {
   padding: 25px;
-  color: #795037!important;
-  background-color: #fcf8ef;
-border: 1px solid #795037;
+  color: #363f46 !important;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 1; /* Initially fully visible */
 }
 
 
 .btn-slideshow{
-  color: #fcf8ef!important;
-  background-color: #795037!important ;
+  color: white!important;
+  background-color: #363f46!important ;
 }
 
 .btn-2{
-  background-color: #fcf8ef!important;
-  border:1px solid #795037 !important;
+  border:1px solid  #a3c9bc!important;
+  background-color: white;
 }
 
 .btn-2:hover{
-  background-color: #795037!important;
-  color: #fcf8ef!important;
-
+  background-color: #363f46!important;
+  color: white!important;
+transform: scale(1.1);
 }
 
 .btn{
@@ -346,9 +365,10 @@ border: 1px solid #795037;
   width: 120px;
 }
 .btn-slideshow:hover{
-  background-color: #fcf8ef!important;
-  color: #795037!important;
+  background-color: white!important;
+  color: #363f46!important;
   border: none;
+  transform: scale(1.1);
 }
 h3,h5{
   color: rgb(0, 91, 228);
@@ -368,7 +388,7 @@ border-radius: 30px;
 }
 
 #loc-search{
-  color:#795037;
+  color:#363f46;
  position: absolute;
 
 }
@@ -404,7 +424,7 @@ border-radius: 30px;
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: white;
   margin: auto; /* Centered */
   padding: 20px;
   border: 1px solid #888;
@@ -426,7 +446,7 @@ border-radius: 30px;
 }
 
 .close {
-  color: #795037;
+  color: #363f46;
   float: right;
   font-size: 28px;
   font-weight: bold;

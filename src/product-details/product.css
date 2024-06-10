@@ -1,0 +1,48 @@
+.price {
+    font-size: 24px;
+    color: #000;
+}
+#original-price {
+    text-decoration: line-through;
+    width: auto!important;
+    color: #363f46!important;
+    background-color: white!important;
+ 
+}
+#discounted-price {
+    width: auto!important;
+    color: whites !important;
+    font-weight: bold;
+    border: 1px solid #1c110b!important;
+    color: #363f46!important;
+    background-color: white!important;
+    border-radius: 30px;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.thumbnails {
+    display: flex;
+justify-content: center;
+
+}
+.thumbnail {
+    width: auto;
+height: 100%;
+    cursor: pointer;
+
+    margin: 5px;
+    border-radius: 5px;
+}
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+}

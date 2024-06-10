@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Zen+Dots&display=swap" rel="stylesheet">
 </head>
 <body >
 
@@ -17,20 +20,20 @@
 
 
 <!-- nav -->
-<nav class="navbar" style="border-bottom:2px solid #1c110b; background-color: #fcf8ef; ">
+<nav class="navbar" style="border-bottom:2px solid #1c110b; background-color: white; ">
     <div class="container ">
       <a href="../../index.html"><img src="../../img/logo-bg.png"  alt="logo" id="navbar-toggler"></a>
   
   
   
       <div class="navbar-menu">
-        <a href="../../index.html"><label style="color: #795037;">Home</label></a>
+        <a href="../../index.html"><label style="color: #363f46;">Home</label></a>
         <label> Products</label>
       <a href="../about/about.html"> <label>About us</label> </a> 
       </div>
   
       <div class="navbar-search">
-        <input type="search" name="search" placeholder="Search" class="form-control" style="background-color: #795037; color: #fcf8ef;">
+        <input type="search" name="search" placeholder="Search" class="form-control" style="background-color: #363f46; color: white;">
         <i class="bi bi-search" style="color: #fcf8ef; position: relative; right: 30px;" ></i>
       </div>
   
@@ -38,21 +41,21 @@
   
       <!-- The Modal -->
       <div class="">
-        <label id="myBtn" style="cursor: pointer;" class="">Select Your Region </label> <i style="color: #795037;" class="bi bi-geo-alt-fill"></i>
+        <label id="myBtn" style="cursor: pointer;" class="">Select Your Region </label> <i style="color: #363f46;" class="bi bi-geo-alt-fill"></i>
       </div>
     
   
       
       <div id="myModal" class="modal">
         <div class="modal-content" >
-          <h3 id="selecLocation" class="text-center" style="color: #795037;">Select Your Region</h3>
+          <h3 id="selecLocation" class="text-center" style="color: #363f46;">Select Your Region</h3>
           <span class="close">&times;</span>
           <div class="mb-2" style="position: relative;">
             <i id="loc-search" class="bi bi-search mx-2"></i>
             <input type="search" id="searchInput" name="search" class="form-control text-center w-100" style="margin-top: -3px;" placeholder="Search for a city...">
           </div>
       
-          <div class="locations" id="locationsList" style="color: #795037;">
+          <div class="locations" id="locationsList" style="color: #363f46;">
             <label onclick="updateLocation('Mumbai')"><i  class="bi bi-geo-alt-fill"></i>Mumbai</label>
             <label onclick="updateLocation('Bangalore')"><i  class="bi bi-geo-alt-fill"></i>Bangalore</label>
             <label onclick="updateLocation('Ahemdabad')"><i  class="bi bi-geo-alt-fill"></i>Ahemdabad</label>
@@ -97,7 +100,7 @@
         <i class="fa-solid fa-bars"></i>
     </div>
       <div class="navbar-mobile-menu" id="navbar-mobile-menu">
-       <a href="../../index.html"> <label style="color: #795037;">Home</label></a>
+       <a href="../../index.html"> <label style="color: #363f46;">Home</label></a>
         <label>Products</label>
         <a href="../about/about.html" style="color: black;"><label>About us</label></a>
   
