@@ -300,23 +300,32 @@
         }
 
 
-        let addToCart = (productId, productTitle, productPrice, productImgSrc) => {
-            const newProduct = {
-                productId: productId,
-                productTitle: productTitle,
-                productPrice: productPrice,
-                productImgSrc: productImgSrc
-            };
-            basket.push(newProduct);
-            localStorage.setItem('data', JSON.stringify(basket));
-            calculate(); // Update the cart amount after adding an item
-        };
+  
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts();
+  calculate(); // Call calculate to set initial cart amount on page load
+});
 
-        let calculate = () => {
-            let cart_icon = document.getElementById('cart_amount');
-            let cart_amount = basket.length;
-            cart_icon.innerHTML = cart_amount;
-        };
+let basket = JSON.parse(localStorage.getItem('data')) || [];
+
+let addToCart = (productId, productTitle, productPrice, productImgSrc) => {
+  const newProduct = {
+      productId: productId,
+      productTitle: productTitle,
+      productPrice: productPrice,
+      productImgSrc: productImgSrc
+  };
+  basket.push(newProduct);
+  localStorage.setItem('data', JSON.stringify(basket));
+  calculate(); // Update the cart amount after adding an item
+};
+
+let calculate = () => {
+  let cart_icon = document.getElementById('cart_amount');
+  let cart_amount = basket.length;
+  cart_icon.innerHTML = cart_amount;
+};
+
 
         document.addEventListener('DOMContentLoaded', viewDetail);
     </script>
