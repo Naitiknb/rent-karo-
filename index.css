@@ -384,7 +384,7 @@ border-radius: 30px;
 }
 
 #star{
-  color: gold;
+  color: gold!important;
 }
 
 #loc-search{

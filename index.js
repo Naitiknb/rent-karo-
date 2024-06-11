@@ -13,9 +13,9 @@ function renderProducts() {
                       <h6>${product.title}</h6>
                       <label>${product.category}</label>
                       <div class="d-flex">
-                          <label class="my-2 fw-bold">${product.price} <i class="bi bi-currency-rupee"></i></label>
+                          <label class="my-2 fw-bold">${product.price} <i class="bi bi-currency-rupee"></i> /Day</label>
                       </div>
-                      <div class="d-flex">${stars}</div>
+                      <div class="d-flex" id="star">${stars}</div>
                       <button class="btn-2 btn w-100" onclick="view(${product.id})">View Details</button>
                       <button onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.imgSrc}')" class="container btn-slideshow btn my-2">
                           Add to Cart <i class="bi bi-bag-plus"></i>
