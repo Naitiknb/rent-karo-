@@ -79,7 +79,9 @@ function updateLocation(location) {
 window.onload = function() {
   var selectedLocation = localStorage.getItem('selectedLocation');
   if (selectedLocation) {
-    document.getElementById('myBtn').innerText = "Selected Region: " ;
+    document.getElementById('myBtn').innerText = selectedLocation;
+  } else {
+    document.getElementById('myBtn').innerText = "Select Your Region";
   }
 };
 

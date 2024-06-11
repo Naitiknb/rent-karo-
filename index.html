@@ -38,38 +38,37 @@
 
 
     <!-- The Modal -->
- 
-<div class="">
-  <label id="myBtn"  style="cursor: pointer;" class="">Select Your Region </label> <i style="color: #363f46;" class="bi bi-geo-alt-fill"></i>
-</div>
-
-<!-- Modal -->
-<div id="myModal" class="modal">
-  <div class="modal-content" style="background-color: white" >
-    <h3 id="selectLocation" class="text-center" style="color: #363f46;">Select Your Region</h3>
-    <span class="close">&times;</span>
-    <div class="mb-2" style="position: relative;">
-      <i id="loc-search" class="bi bi-search mx-2"></i>
-      <input type="search" id="searchInput" name="search" class="form-control text-center w-100" style="margin-top: -5px; background-color: white;" placeholder="Search for a city...">
+    <div class="">
+      <label id="myBtn" style="cursor: pointer;" class="">Select Your Region</label> <i style="color: #363f46;" class="bi bi-geo-alt-fill"></i>
     </div>
-
-    <div class="locations" id="locationsList" style="color: #363f46;">
-      <label onclick="updateLocation('Mumbai')"><i class="bi bi-geo-alt-fill"></i>Mumbai</label>
-      <label onclick="updateLocation('Bangalore')"><i class="bi bi-geo-alt-fill"></i>Bangalore</label>
-      <label onclick="updateLocation('Ahmedabad')"><i class="bi bi-geo-alt-fill"></i>Ahmedabad</label>
-      <label onclick="updateLocation('Chennai')"><i class="bi bi-geo-alt-fill"></i>Chennai</label>
-      <label onclick="updateLocation('Kochi')"><i class="bi bi-geo-alt-fill"></i>Kochi</label>
-      <label onclick="updateLocation('Pune')"><i class="bi bi-geo-alt-fill"></i>Pune</label>
-      <label onclick="updateLocation('Delhi')"><i class="bi bi-geo-alt-fill"></i>Delhi</label>
-      <label onclick="updateLocation('Amritsar')"><i class="bi bi-geo-alt-fill"></i>Amritsar</label>
-      <label onclick="updateLocation('Kolkata')"><i class="bi bi-geo-alt-fill"></i>Kolkata</label>
-      <label onclick="updateLocation('Patna')"><i class="bi bi-geo-alt-fill"></i>Patna</label>
-      <label onclick="updateLocation('Lucknow')"><i class="bi bi-geo-alt-fill"></i>Lucknow</label>
-      <label onclick="updateLocation('Varanasi')"><i class="bi bi-geo-alt-fill"></i>Varanasi</label>
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content" style="background-color: white">
+        <h3 id="selectLocation" class="text-center" style="color: #363f46;">Select Your Region</h3>
+        <span class="close">&times;</span>
+        <div class="mb-2" style="position: relative;">
+          <i id="loc-search" class="bi bi-search mx-2"></i>
+          <input type="search" id="searchInput" name="search" class="form-control text-center w-100" style="margin-top: -5px; background-color: white;" placeholder="Search for a city...">
+        </div>
+    
+        <div class="locations" id="locationsList" style="color: #363f46;">
+          <!-- <label onclick="updateLocation('select Your Region')"><i class="bi bi-geo-alt-fill"></i>Select Your</label> -->
+          <label onclick="updateLocation('Mumbai')"><i class="bi bi-geo-alt-fill"></i>Mumbai</label>
+          <label onclick="updateLocation('Bangalore')"><i class="bi bi-geo-alt-fill"></i>Bangalore</label>
+          <label onclick="updateLocation('Ahmedabad')"><i class="bi bi-geo-alt-fill"></i>Ahmedabad</label>
+          <label onclick="updateLocation('Chennai')"><i class="bi bi-geo-alt-fill"></i>Chennai</label>
+          <label onclick="updateLocation('Kochi')"><i class="bi bi-geo-alt-fill"></i>Kochi</label>
+          <label onclick="updateLocation('Pune')"><i class="bi bi-geo-alt-fill"></i>Pune</label>
+          <label onclick="updateLocation('Delhi')"><i class="bi bi-geo-alt-fill"></i>Delhi</label>
+          <label onclick="updateLocation('Amritsar')"><i class="bi bi-geo-alt-fill"></i>Amritsar</label>
+          <label onclick="updateLocation('Kolkata')"><i class="bi bi-geo-alt-fill"></i>Kolkata</label>
+          <label onclick="updateLocation('Patna')"><i class="bi bi-geo-alt-fill"></i>Patna</label>
+          <label onclick="updateLocation('Lucknow')"><i class="bi bi-geo-alt-fill"></i>Lucknow</label>
+          <label onclick="updateLocation('Varanasi')"><i class="bi bi-geo-alt-fill"></i>Varanasi</label>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
 <!-- Display the selected location -->
 
     
