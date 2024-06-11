@@ -71,7 +71,7 @@ menu.classList.toggle('open');
 
 const carouselElement = document.querySelector('#carouselExampleDark');
 const carousel = new bootstrap.Carousel(carouselElement, {
-interval: 2000,
+interval: 1000,
 ride: 'carousel'
 });
 
