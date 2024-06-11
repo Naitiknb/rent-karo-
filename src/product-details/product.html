@@ -240,7 +240,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <script src="../../data.js"></script>
-    <!-- <script src="../../index.js" ></script> -->
+    <script src="../../common.js" ></script>
     <script>
 
         function changeImage(src) {
@@ -257,45 +257,42 @@
             const detail = document.getElementById('renderDetail');
             detail.innerHTML = `
       <div class="container">
-          <div class="row">
-              <div class="col-md-5">
-                  <img id="mainImage" src="${product.imgSrc}" alt="Main Image" class="main-image ">
-                  <div class="row thumbnails">
-                      <div class="col-md-1 thumbnail">
-                          <img src="${product.imgss_1}" alt="Thumbnail 1" class="h-100 w-100 my-5" onclick="changeImage('${product.imgss_1}')">
-                      </div>
-                       <div class="col-md-1 thumbnail">
-                          <img src="${product.imgss_2}" alt="Thumbnail 1" class="h-100 w-100 my-5" onclick="changeImage('${product.imgss_2}')">
-                      </div>
-
-                         <div class="col-md-1 thumbnail">
-                          <img src="${product.imgss_3}" alt="Thumbnail 1" class="h-50 w-100 my-5" onclick="changeImage('${product.imgss_3}')">
-                      </div>
-                      <!-- Add more thumbnails if necessary -->
-                  </div>
-              </div>
-              <div class="col-md-1"></div>
-              <div class="col-md-6">
-                  <div style="margin-top: 120px;">
-                      <h1 style="font-size: 50px;">${product.title}</h1>
-                      <h5 class="my-4">${product.category}</h5>
-                      <p>${product.description}</p>
-                      <label class="my-4 w-25 text-center" id="original-price">
-                          <i class="bi bi-currency-rupee"></i> 1500 Rented Price
-                      </label>
-                      <br>
-                      <label class="my-4 w-25 text-center" id="discounted-price">
-                          <i class="bi bi-currency-rupee"></i>${product.price}
-                      </label>
-                      <br>
-                      <div>
-                          <button class="btn-slideshow btn w-auto mx-2" style="border-radius: 25px;" onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.imgSrc}')">Add to cart <i class="bi bi-bag-check"></i></button>
-                         <button class="btn-2 btn w-auto mx-3" style="border-radius: 25px;">Add to favourite <i class="bi bi-bag-heart"></i></button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+    <div class="row">
+        <div class="col-md-5 col-12">
+            <img id="mainImage" src="${product.imgSrc}" alt="Main Image" class="main-image">
+            <div class="row thumbnails justify-content-center">
+                <div class="col-md-1 col-3 thumbnail">
+                    <img src="${product.imgss_1}" alt="Thumbnail 1" class="h-100 w-100 my-2" onclick="changeImage('${product.imgss_1}')">
+                </div>
+                <div class="col-md-1 col-3 thumbnail">
+                    <img src="${product.imgss_2}" alt="Thumbnail 2" class="h-100 w-100 my-2" onclick="changeImage('${product.imgss_2}')">
+                </div>
+                <div class="col-md-1 col-3 thumbnail">
+                    <img src="${product.imgss_3}" alt="Thumbnail 3" class="h-100 w-100 my-2" onclick="changeImage('${product.imgss_3}')">
+                </div>
+                <!-- Add more thumbnails if necessary -->
+            </div>
+        </div>
+        <div class="col-md-1 d-none d-md-block"></div>
+        <div class="col-md-6 col-12">
+            <div class="mt-md-5 mt-3">
+                <h1 class="display-4">${product.title}</h1>
+                <h5 class="my-4">${product.category}</h5>
+                <p>${product.description}</p>
+                <label class="my-4 w-25 text-center d-block" id="original-price">
+                    <i class="bi bi-currency-rupee"></i> 1500 Rented Price
+                </label>
+                <label class="my-4 w-25 text-center d-block" id="discounted-price">
+                    <i class="bi bi-currency-rupee"></i>${product.price}
+                </label>
+                <div>
+                    <button class="btn  btn-slideshow w-auto mx-2" style="border-radius: 25px;" onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.imgSrc}')">Add to cart <i class="bi bi-bag-check"></i></button>
+                    <button class="btn btn-2 my-3 w-auto mx-3" style="border-radius: 25px;">Add to favourite <i class="bi bi-bag-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
   `;
         }
 
