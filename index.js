@@ -17,16 +17,33 @@ function renderProducts() {
                       </div>
                       <div class="d-flex" id="star">${stars}</div>
                       <button class="btn-2 btn w-100" onclick="view(${product.id})">View Details</button>
-                      <button onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.imgSrc}')" class="container btn-slideshow btn my-2">
-                          Add to Cart <i class="bi bi-bag-plus"></i>
-                      </button>
+                    <button class="add-to-cart container btn-slideshow btn my-2" onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.imgSrc}')">
+    Add to Cart <i class="bi bi-bag-plus"></i>
+</button>
                   </div>
               </div>
           </div>
+
+    
       `;
       productList.innerHTML += productCard;
   });
 }
+
+// modal
+document.addEventListener('click', function(event) {
+  if (event.target.matches('.add-to-cart')) {
+    const modal = document.getElementById('cartModal');
+    modal.style.display = 'block';
+  } else if (event.target.matches('.close')) {
+    const modal = document.getElementById('cartModal');
+    modal.style.display = 'none';
+  } else if (event.target.matches('#cartModal')) {
+    const modal = document.getElementById('cartModal');
+    modal.style.display = 'none';
+  }
+});
+// modal
 
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
@@ -36,6 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
 let basket = JSON.parse(localStorage.getItem('data')) || [];
 
 let addToCart = (productId, productTitle, productPrice, productImgSrc) => {
+  const existingProduct = basket.find(item => item.productId === productId);
+ if(!existingProduct){
   const newProduct = {
       productId: productId,
       productTitle: productTitle,
@@ -45,6 +64,14 @@ let addToCart = (productId, productTitle, productPrice, productImgSrc) => {
   basket.push(newProduct);
   localStorage.setItem('data', JSON.stringify(basket));
   calculate(); // Update the cart amount after adding an item
+
+
+}else{
+  const modal = document.getElementById('cartModal');
+  const modalMessage = document.getElementById('modalMessage');
+  modalMessage.innerText = `${productTitle} is already in your cart.`;
+  modal.style.display = 'block';
+}
 };
 
 let calculate = () => {
@@ -119,3 +146,5 @@ if (text.includes(filter)) {
 }
 });
 });
+
+

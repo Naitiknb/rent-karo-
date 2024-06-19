@@ -230,6 +230,18 @@
 
     <div class="products"></div>
 
+<!-- modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalMessage">Item added to cart.</p>
+    </div>
+  </div>
+  <!-- modal -->
+  <div id="pagination-controls" class="pagination-controls"></div>
+  
+    </div>
+  </div>
     <!-- footer -->
 
 
@@ -287,7 +299,7 @@
                     <i class="bi bi-currency-rupee"></i>${product.price}/Day
                 </label>
                 <div>
-                    <button class="btn  btn-slideshow w-auto mx-2" style="border-radius: 25px;" onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.imgSrc}')">Add to cart <i class="bi bi-bag-check"></i></button>
+                    <button class="add-to-cart btn  btn-slideshow w-auto mx-2" style="border-radius: 25px;" onclick="addToCart(${product.id}, '${product.title}', ${product.price}, '${product.imgSrc}')">Add to cart <i class="bi bi-bag-check"></i></button>
                     <button class="btn btn-2 my-3 w-auto mx-3" style="border-radius: 25px;">Add to favourite <i class="bi bi-bag-heart"></i></button>
                 </div>
             </div>
@@ -297,9 +309,20 @@
   `;
         }
 
-        // <label class="my-4 w-25 text-center d-block" id="original-price">
-        //             <i class="bi bi-currency-rupee"></i> 1500 Rented Price 
-        //         </label>
+        // modal
+document.addEventListener('click', function(event) {
+  if (event.target.matches('.add-to-cart')) {
+    const modal = document.getElementById('cartModal');
+    modal.style.display = 'block';
+  } else if (event.target.matches('.close')) {
+    const modal = document.getElementById('cartModal');
+    modal.style.display = 'none';
+  } else if (event.target.matches('#cartModal')) {
+    const modal = document.getElementById('cartModal');
+    modal.style.display = 'none';
+  }
+});
+// modal
   
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
@@ -309,16 +332,25 @@ document.addEventListener('DOMContentLoaded', () => {
 let basket = JSON.parse(localStorage.getItem('data')) || [];
 
 let addToCart = (productId, productTitle, productPrice, productImgSrc) => {
+    const existingProduct = basket.find(item => item.productId === productId);
+ if(!existingProduct){
   const newProduct = {
       productId: productId,
       productTitle: productTitle,
       productPrice: productPrice,
       productImgSrc: productImgSrc
-
   };
   basket.push(newProduct);
   localStorage.setItem('data', JSON.stringify(basket));
   calculate(); // Update the cart amount after adding an item
+
+
+}else{
+  const modal = document.getElementById('cartModal');
+  const modalMessage = document.getElementById('modalMessage');
+  modalMessage.innerText = `${productTitle} is already in your cart.`;
+  modal.style.display = 'block';
+}
 };
 
 let calculate = () => {

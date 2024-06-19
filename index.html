@@ -26,7 +26,7 @@
 
     <div class="navbar-menu">
       <a href="./index.html"><label style="color: #363f46;">Home</label></a>
-      <label> Products</label>
+      <a href="./src/product-page/product-page.html"><label> Products</label></a>
     <a href="./src/about/about.html"> <label>About us</label> </a> 
     </div>
 
@@ -290,14 +290,23 @@
     <div class="col-md-9 col-12 my-5 d-flex flex-wrap" id="product-list">
       
 </div>
+<!-- modal -->
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <p id="modalMessage">Item added to cart.</p>
   </div>
+</div>
+<!-- modal -->
+<div id="pagination-controls" class="pagination-controls"></div>
 
+  </div>
 </div>
 
 
 
 <!-- pagination -->
- <div class="container">
+ <!-- <div class="container">
  <div class="d-flex justify-content-end">
 <ul class="d-flex pagination">
   <li id="page"> <i class="bi bi-arrow-left"></i></li>
@@ -308,6 +317,14 @@
 <li id="page">...</li>
 <li id="page"><i class="bi bi-arrow-right"></i></li>
 </ul>
+</div>
+</div> -->
+
+
+<div class="text-center mt-4">
+  <button id="prev-page" class="btn btn-outline-primary ">&laquo; Previous</button>
+  <span id="current-page">1 / 2</span> <!-- Display current page / total pages -->
+  <button id="next-page" class="btn btn-outline-primary ">Next &raquo;</button>
 </div>
 </div>
 <!-- paginaotion -->
@@ -410,6 +427,7 @@
 
 
 <div class="products"></div>
+
 
 <!-- footer -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
