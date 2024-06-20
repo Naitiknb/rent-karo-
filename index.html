@@ -219,13 +219,11 @@
 
 
 
-<!-- filter -->
-
+<!-- Filter Section -->
 <div class="container">
   <div class="row">
     <div class="col-md-3 col-12 rounded my-5" style="background-color: white; color: #363f46;">
       <h5 class="my-2 text-center fw-bold">Filter By Section</h5>
-   
       <hr>
       <div class="d-flex justify-content-between">
         <label class="fw-bold h6">Filter by Category</label>
@@ -236,24 +234,20 @@
         <input type="search" name="search" class="form-control text-center" style="height: 30px;" >
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="gamingConsole">
+        <input type="checkbox" class="form-check-input filter-category" id="gamingConsole" value="Gaming Console">
         <label class="form-check-label" for="gamingConsole">Gaming Console</label>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="camera">
+        <input type="checkbox" class="form-check-input filter-category" id="camera" value="Camera">
         <label class="form-check-label" for="camera">Camera</label>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="bicycle">
+        <input type="checkbox" class="form-check-input filter-category" id="bicycle" value="Bicycle">
         <label class="form-check-label" for="bicycle">Bicycle</label>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="soundSystem">
+        <input type="checkbox" class="form-check-input filter-category" id="soundSystem" value="Speaker & Woofers">
         <label class="form-check-label" for="soundSystem">Sound System and Woofers</label>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="electronicDevices">
-        <label class="form-check-label" for="electronicDevices">Electronic Devices</label>
       </div>
       <hr>
       <div class="d-flex justify-content-between">
@@ -261,35 +255,44 @@
         <i class="bi bi-chevron-compact-down h6"></i>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="sony">
+        <input type="checkbox" class="form-check-input filter-brand" id="sony" value="Sony">
         <label class="form-check-label" for="sony">Sony</label>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="microsoft">
+        <input type="checkbox" class="form-check-input filter-brand" id="microsoft" value="Microsoft">
         <label class="form-check-label" for="microsoft">Microsoft</label>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="hero">
+        <input type="checkbox" class="form-check-input filter-brand" id="hero" value="Hero">
         <label class="form-check-label" for="hero">Hero</label>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="nikon">
+        <input type="checkbox" class="form-check-input filter-brand" id="nikon" value="Nikon">
         <label class="form-check-label" for="nikon">Nikon</label>
       </div>
       <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="casio">
+        <input type="checkbox" class="form-check-input filter-brand" id="casio" value="Casio">
         <label class="form-check-label" for="casio">Casio</label>
       </div>
       <hr>
       <div class="d-flex justify-content-around my-2">
-        <button class="btn-2 btn " style="width: 40%; background-color: white;">Reset</button>
-        <button class="btn-slideshow btn" style="width: 40%;">Apply</button>
+        <button class="btn-2 btn" style="width: 40%; background-color: white;" id="resetFilters">Reset</button>
+        <button class="btn-slideshow btn" style="width: 40%;" id="applyFilters">Apply</button>
       </div>
     </div>
+  
+
+
+
 
     <div class="col-md-9 col-12 my-5 d-flex flex-wrap" id="product-list">
       
 </div>
+</div>
+</div>
+
+<!-- filter + product -->
+ 
 <!-- modal -->
 <div id="cartModal" class="modal">
   <div class="modal-content">
@@ -306,25 +309,10 @@
 
 
 <!-- pagination -->
- <!-- <div class="container">
- <div class="d-flex justify-content-end">
-<ul class="d-flex pagination">
-  <li id="page"> <i class="bi bi-arrow-left"></i></li>
-<li id="page">1</li>
-<li id="page">2</li>
-<li id="page">3</li>
-<li id="page">4</li>
-<li id="page">...</li>
-<li id="page"><i class="bi bi-arrow-right"></i></li>
-</ul>
-</div>
-</div> -->
-
-
 <div class="text-center mt-4">
-  <button id="prev-page" class="btn btn-outline-primary ">&laquo; Previous</button>
+  <button id="prev-page" class="btn btn-2">&laquo; Previous</button>
   <span id="current-page">1 / 2</span> <!-- Display current page / total pages -->
-  <button id="next-page" class="btn btn-outline-primary ">Next &raquo;</button>
+  <button id="next-page" class="btn btn-2 ">Next &raquo;</button>
 </div>
 </div>
 <!-- paginaotion -->
