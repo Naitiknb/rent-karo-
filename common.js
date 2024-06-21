@@ -57,49 +57,59 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
 
 
-// // filter section
-// document.addEventListener('DOMContentLoaded',function(){
-//   const checkboxes = document.querySelectorAll('.form-check-input');
-//   const productList = document.getElementById('product-list');
 
 
-// function displayProducts(products){
-//   productList.innerHTML='';
-//   products.forEach(product =>{
+// Navbar  js 
+document.getElementById('navbar-toggle-button').addEventListener('click', function() {
+  var menu = document.getElementById('navbar-mobile-menu');
+  menu.classList.toggle('open');
+});
 
- 
-//     const productDiv = document.createElement('div');
-//     productDiv.className = 'item';
-//     productDiv.textContent = '${product.name}';
-//     productDiv.dataset.category = product.category;
-//     productDiv.dataset.company=product.company;
-//     productList.appendChild(productDiv);
-//   })
-// }
+// const carouselElement = document.querySelector('#carouselExampleDark');
+// const carousel = new bootstrap.Carousel(carouselElement, {
+//   interval: 1000,
+//   ride: 'carousel'
+// });
 
+// Modal navbar
+function updateLocation(location) {
+  var locationLabel = document.getElementById('myBtn');
+  locationLabel.innerText = location; // Update the text
+  modal.style.display = "none"; // Close the modal after selecting location
+}
 
-// function filterProducts(){
-// const selectedCatogories = Array.from(document.querySelectorAll('.form-check-input:checked')).map(checkboxes=>checkboxes.id);
-// const items = document.querySelectorAll('#product-list .item');
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
 
-// items.forEach(item =>{
-//   const itemCategory = item.dataset.category;
-//   const itemCompany = item.dataset.company;
-//   if(selectedCatogories.includes(itemCategory)|| selectedCatogories.includes(itemCompany)){
-//     item.classList.remove('hidden');
-//   }else{
-//     item.classList.add('hidden');
-//   }
-// })
-// }
-// checkboxes.forEach(checkboxes =>{
-//   checkboxes.addEventListener('change',filterProducts);
-// })
+// Open the modal navabr
+btn.onclick = function() {
+  modal.style.display = "block";
+}
 
-// displayProducts(products)
+// Close the modal navbar
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
+// Close the modal when clicking outside of it navbar
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
-// })
-
-
-// // filter section
+// Search filter function navbabr
+document.getElementById('searchInput').addEventListener('input', function() {
+  var filter = this.value.toLowerCase();
+  var labels = document.querySelectorAll('.locations label');
+  labels.forEach(function(label) {
+    var text = label.innerText.toLowerCase();
+    if (text.includes(filter)) {
+      label.style.display = 'block';
+    } else {
+      label.style.display = 'none';
+    }
+  });
+});
+// Navbar  js 

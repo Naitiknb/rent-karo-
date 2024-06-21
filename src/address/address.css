@@ -14,12 +14,16 @@
     background-color: white !important;
 }
 
-input,label{
+#label-address{
     color: #363f46!important;
 }
 
 
-
+.navbar-mobile-menu input,
+.navbar-mobile-menu label {
+  margin: 10px 0;
+  color: #349184;
+}
 
 .card-body .d-flex {
     align-items: center;

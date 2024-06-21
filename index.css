@@ -68,12 +68,14 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px 20px
+  padding: 10px 20px;
+ 
 }
 
 .navbar-mobile-menu input,
 .navbar-mobile-menu label {
-  margin: 10px 0
+  margin: 10px 0;
+  color: #349184;
 }
 
 .navbar-toggler {
@@ -337,7 +339,8 @@ ul {
 .card-body {
   padding: 25px;
   color: #363f46 !important;
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
