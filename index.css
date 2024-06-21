@@ -1,9 +1,10 @@
 body {
-  background-color: white!important;
+  /* background-color: white!important; */
   margin: 0;
   font-family: "Zen Dots", sans-serif !important;
     font-weight: 300;
     font-style: normal;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 
@@ -134,7 +135,7 @@ ul {
 }
 
 .footer-section {
-  background-color: white;
+  
   position: relative
 }
 
@@ -336,7 +337,7 @@ ul {
 .card-body {
   padding: 25px;
   color: #363f46 !important;
-  background-color: #ffffff;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
