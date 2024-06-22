@@ -9,7 +9,8 @@ function renderProducts(productsToRender) {
           <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 px-2">
               <div class="card">
                   <div class="card-body">
-                      <img src="${product.imgSrc}" class="img-fluid my-2  ">
+                  <div class="d-flex justify-content-center">
+                      <img src="${product.imgSrc}" class="p-img img-fluid my-2  "></div>
                       <h6>${product.title}</h6>
                       <label>${product.category}</label>
                       <div class="d-flex">
