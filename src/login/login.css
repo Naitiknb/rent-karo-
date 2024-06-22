@@ -7,12 +7,15 @@
 
   .bulb {
     margin-left: 90px;
-
+   
     height: 150px;
   }
 
   .man {
-    margin-top: 50px;
+  height: 400px;
+  width: 220px;
+  position: relative;
+  left: 0;
   }
 
   .sign,
@@ -37,4 +40,8 @@
 
   .ac:hover{
     color: #363f46;
+  }
+
+  .sec{
+    margin-top:150px;
   }
