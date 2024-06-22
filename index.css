@@ -37,7 +37,8 @@ body {
 .navbar-menu label:hover {
   margin: 0 10px;
   color: #363f46;
-  cursor: pointer
+  cursor: pointer;
+  border-bottom:2px solid #349184;
 }
 
 .navbar-search {
