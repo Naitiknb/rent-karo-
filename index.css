@@ -481,3 +481,7 @@ border-radius: 30px;
 /* modal */
 
 /* modal */
+
+img{
+  mix-blend-mode: multiply;
+}
