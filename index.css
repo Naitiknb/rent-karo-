@@ -34,11 +34,19 @@ body {
   color: #349184
 }
 
+
+
 .navbar-menu label:hover {
   margin: 0 10px;
   color: #363f46;
   cursor: pointer;
   border-bottom:2px solid #349184;
+}
+
+
+.navbar-mobile-menu label:hover{
+  border-bottom:2px solid #349184;
+  cursor: pointer;
 }
 
 .navbar-search {
@@ -79,11 +87,15 @@ body {
   color: #349184;
 }
 
+
+
 .navbar-toggler {
   display: none;
   font-size: 24px;
   cursor: pointer
 }
+
+
 
 @media (max-width:768px) {
   .navbar-menu label:hover {
@@ -96,7 +108,9 @@ body {
       display: none
   }
   .navbar-toggler {
-      display: block
+      display: block;
+      border-bottom: 1px solid #349184;
+      
   }
   .navbar-mobile-menu.open {
       display: flex
