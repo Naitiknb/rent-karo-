@@ -113,3 +113,16 @@ document.getElementById('searchInput').addEventListener('input', function() {
   });
 });
 // Navbar  js 
+
+
+
+// common.js (for client-side validation)
+document.querySelector('form').addEventListener('submit', function(event) {
+  const password = document.getElementById('password').value;
+  const cpassword = document.getElementById('cpassword').value;
+
+  if (password !== cpassword) {
+      alert('Passwords do not match');
+      event.preventDefault(); // Prevent form submission
+  }
+});
