@@ -131,58 +131,42 @@
   </nav>
   <!-- nav -->
   
-
-
-
+  <form action="/signup" method="post">
     <div class="container">
         <div class="row">
-            <div class="main col-md-4 ">
-
+            <div class="main col-md-4">
                 <div class="mx-auto">
-
-
-                   
-                    <h1 class="h2 ">Create An Account</h1>
+                    <h1 class="h2">Create An Account</h1>
 
                     <h4>Create Username</h4>
-                    <input type="text" class="username form-control w-100" name="username" required>
+                    <input type="text" class="username form-control w-100" id="username" name="username" required>
 
-
-
-                    <h4> Email</h4>
+                    <h4>Email</h4>
                     <input type="email" class="email1 form-control w-100" name="email" required>
 
-
                     <h4>Password</h4>
-                    <input type="password" class="password form-control w-100" name="password" required>
-
+                    <input type="password" class="password form-control w-100" name="password" id="password" required>
 
                     <h4>Confirm Password</h4>
-                    <input type="password" class="cpassword form-control w-100" name="password" required>
+                    <input type="password" class="cpassword form-control w-100" name="cpassword" id="cpassword" required>
 
-
-                    <h6 class="my-3">Already Have an Accout <span class="fw-bold text-dark">Login ?</span> </h6>
-
+                    <h6 class="my-3">Already Have an Account? <span class="fw-bold text-dark">Login</span></h6>
                     <a href="./login.html">
-                        <button class="sign btn btn w-50 my-2 ">SIGN IN <i class="fa-solid fa-user-plus"></i></button>
+                        <button class="sign btn btn w-50 my-2">SIGN IN <i class="fa-solid fa-user-plus"></i></button>
                     </a>
-
                 </div>
-
-           
-
             </div>
 
-
-
             <div class="col-md-8 d-flex justify-content-center">
-
-
-                <img class="pic " src="../../img/Girl and boy sitting with laptop.png">
+                <img class="pic" src="../../img/Girl and boy sitting with laptop.png">
                 <div class="message" style="display: none;">Please enter all the required details.</div>
             </div>
         </div>
     </div>
+</form>
+
+
+
     <script src="../../common.js"></script>
 </body>
 
