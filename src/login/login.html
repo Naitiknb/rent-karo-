@@ -130,37 +130,35 @@
 </nav>
 <!-- nav -->
 
-
-
-
-    <div class="container">
+<form action="/login" method="post">
+  <div class="container">
       <div class="row">
-        <div class="main col-md-6">
-          <div class="">
-            <img class="man h-25 w-25 mx-5" src="../../img/man 2.png">
+          <div class="main col-md-6">
+              <div class="">
+                  <img class="man h-25 w-25 mx-5" src="../../img/man 2.png">
+              </div>
+              <h1>Welcome to Rent Karo</h1>
+              <h4>Username</h4>
+              <input class="username form-control w-75" type="text" name="username">
+              <h4>Password</h4>
+              <input class="Password form-control w-75" type="password" name="password">
+              <a href="../../index.html"><label class="forget mt-2">Forgot password?</label></a>
+              <br>
+              <button type="submit" class="login btn btn w-auto my-3"><b>LOGIN</b> <i class="fa-solid fa-right-to-bracket"></i></button>
+              <a href="../signup/signup.html" class="ac">
+                  <button type="button" class="sign btn btn w-auto"><b>CREATE ACCOUNT</b> <i class="fa-solid fa-right-to-bracket"></i></button>
+              </a>
           </div>
-          <h1>Welcome to Rent Karo</h1>
-          <h4>Username</h4>
-          <input class="username form-control w-75" type="text" name="username">
-          <h4>Password</h4>
-          <input class="Password form-control w-75" type="password" name="password">
-          <a href="../../index.html"><label class="forget  mt-2">Forgot password?</label></a>
-          <br>
-          <button type="submit" class="login btn btn w-auto my-3"><b>LOGIN</b> <i
-              class="fa-solid fa-right-to-bracket"></i></button>
-          <a href="../signup/signup.html" class="ac">
-            <button type="button" class="sign btn btn w-auto"><b>CREATE ACCOUNT</b> <i
-                class="fa-solid fa-right-to-bracket"></i></button>
-          </a>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="sec col-md-5 d-flex justify-content-center">
-          <img class="bulb " src="../../img/bulb.png">
-          <br>
-          <img class="man  " src="../../img/Rectangle.png">
-        </div>
+          <div class="col-md-1"></div>
+          <div class="sec col-md-5 d-flex justify-content-center">
+              <img class="bulb" src="../../img/bulb.png">
+              <br>
+              <img class="man" src="../../img/Rectangle.png">
+          </div>
       </div>
-    </div>
+  </div>
+</form>
+
   <script src="../../common.js"></script>
 </body>
 
