@@ -1,5 +1,3 @@
-
-
 // Function to update the selected location
 function updateLocation(location) {
   localStorage.setItem('selectedLocation', location);
@@ -54,69 +52,13 @@ document.getElementById('searchInput').addEventListener('input', function() {
   });
 });
 
-
-
-
-
-
-// Navbar  js 
+// Navbar toggle function
 document.getElementById('navbar-toggle-button').addEventListener('click', function() {
   var menu = document.getElementById('navbar-mobile-menu');
   menu.classList.toggle('open');
 });
 
-// const carouselElement = document.querySelector('#carouselExampleDark');
-// const carousel = new bootstrap.Carousel(carouselElement, {
-//   interval: 1000,
-//   ride: 'carousel'
-// });
-
-// Modal navbar
-function updateLocation(location) {
-  var locationLabel = document.getElementById('myBtn');
-  locationLabel.innerText = location; // Update the text
-  modal.style.display = "none"; // Close the modal after selecting location
-}
-
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
-
-// Open the modal navabr
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// Close the modal navbar
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// Close the modal when clicking outside of it navbar
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-// Search filter function navbabr
-document.getElementById('searchInput').addEventListener('input', function() {
-  var filter = this.value.toLowerCase();
-  var labels = document.querySelectorAll('.locations label');
-  labels.forEach(function(label) {
-    var text = label.innerText.toLowerCase();
-    if (text.includes(filter)) {
-      label.style.display = 'block';
-    } else {
-      label.style.display = 'none';
-    }
-  });
-});
-// Navbar  js 
-
-
-
-// common.js (for client-side validation)
+// Client-side validation for form submission
 document.querySelector('form').addEventListener('submit', function(event) {
   const password = document.getElementById('password').value;
   const cpassword = document.getElementById('cpassword').value;
