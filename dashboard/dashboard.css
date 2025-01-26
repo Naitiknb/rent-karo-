@@ -1,0 +1,137 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+th, td {
+    text-align: left;
+}
+.table-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.table-container div {
+    padding: 10px;
+}
+
+#option-sidebar-menu {
+    color: gray;
+    font-weight: 600;
+}
+
+#option-sidebar-menu:hover {
+    background-color: rgb(222, 222, 253);
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(79, 79, 255);
+    width: 100%;
+}
+
+#sidebar-menu {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: grey;
+}
+
+#sidebar-menu:hover {
+    background-color: rgb(222, 222, 253);
+    cursor: pointer;
+    border-radius: 5px;
+    color: rgb(79, 79, 255);
+    width: 100%;
+}
+
+/* Additional responsive styles */
+@media (max-width: 767px) {
+    .col-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .text-center label {
+        font-size: 18px;
+    }
+
+    #sidebar-menu {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #sidebar-menu {
+        font-size: 16px;
+    }
+}
+
+
+.card-counter {
+    box-shadow: 2px 2px 10px #DADADA;
+    margin: 5px;
+    padding: 20px 10px;
+    background-color: #fff;
+    height: 150px; /* Increase the height to accommodate text */
+    border-radius: 5px;
+    transition: .3s linear all;
+    position: relative; /* Make sure positioning is relative */
+    overflow: hidden; /* Ensure no overflow issues */
+}
+
+.card-counter:hover {
+    box-shadow: 4px 4px 20px #DADADA;
+    transition: .3s linear all;
+}
+
+.card-counter.primary {
+    background-color: #007bff;
+    color: #FFF;
+}
+
+.card-counter.danger {
+    background-color: #ef5350;
+    color: #FFF;
+}
+
+.card-counter.success {
+    background-color: #66bb6a;
+    color: #FFF;
+}
+
+.card-counter.info {
+    background-color: #26c6da;
+    color: #FFF;
+}
+
+.card-counter i {
+    font-size: 4em; /* Decrease icon size to fit better */
+    opacity: 0.2;
+    position: absolute;
+    top: 10px; /* Adjust positioning */
+    left: 10px; /* Adjust positioning */
+}
+
+.card-counter .count-numbers {
+    position: absolute;
+    right: 15px; /* Decrease right positioning */
+    top: 20px;
+    font-size: 28px; /* Adjust font size */
+    display: block;
+    word-wrap: break-word; /* Wrap text within the container */
+    white-space: normal; /* Ensure text wraps normally */
+}
+
+.card-counter .count-name {
+    position: absolute;
+    right: 15px; /* Decrease right positioning */
+    top: 60px; /* Adjust top positioning */
+    font-style: italic;
+    text-transform: capitalize;
+    opacity: 0.7; /* Slightly increase opacity */
+    display: block;
+    font-size: 16px; /* Adjust font size */
+}
